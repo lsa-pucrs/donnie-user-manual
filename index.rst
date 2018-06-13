@@ -16,6 +16,11 @@ About Donnie
     :alt: sempre use alt para descreve a imagem p um deficiente visual
 
 
+.. WARNING::
+
+  This document is for users only. If you want to build, configure, or add features to your Donnie, please refer to the `Donnie Assistive Robot: Developer Manual<http://donnie-manual.readthedocs.io/en/latest/>`_
+
+
 Donnie is an assistive technology project, whose objective is to use robotics to facilitate programming teaching to visually impaired students.
 It is divided in two main parts:
 
