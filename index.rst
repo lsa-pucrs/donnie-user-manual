@@ -1,6 +1,6 @@
 
 ==========================
-Donnie Assistive Robot User Manual
+Donnie Assistive Robot: User Manual
 ==========================
 
 
@@ -32,7 +32,7 @@ The project is in its second version, developed in the Laboratório de Sistemas 
 
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    
    source/getting_started/index
    source/godonnie/index

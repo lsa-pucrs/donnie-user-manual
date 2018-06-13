@@ -25,12 +25,3 @@ Features
 
 The simulation is recommended if you want to known about Donnie but don't have the required resources to build your own Donnie robot.
 
-
-
-.. toctree::
-   :maxdepth: 2
-   
-   About Donnie <about>
-   How to Install Donnie's Software <install>
-   How to Build Your Own Donnie Robot <build>
-
