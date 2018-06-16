@@ -1,10 +1,10 @@
 
 ==========================
-Donnie Assistive Robot: User Manual
+Robô Assistivo Donnie: Manual do Usuário
 ==========================
 
 
-About Donnie
+Sobre o Donnie
 -----------------
 
 .. image:: ./source/getting_started/images/donnie-robot.png
@@ -18,7 +18,7 @@ About Donnie
 
 .. WARNING::
 
-  This document is for users only. If you want to build, configure, or add features to your Donnie, please refer to the `Donnie Assistive Robot: Developer Manual <http://donnie-manual.readthedocs.io/en/latest/index.html>`_
+  Este documento é para ser usado por usuários. Se você quer compilar, configurar, adicionar funcionalidades para o seu Donnie, favor referenciar o dofumento `Robô Assistivo Donnie: Manual do Desenvolvedor <http://donnie-manual.readthedocs.io/en/latest/index.html>`_
 
 
 Donnie is an assistive technology project, whose objective is to use robotics to facilitate programming teaching to visually impaired students.
