@@ -15,3 +15,10 @@ falar sobre os cenarios prontos.
 um dos cenarios deve incluir muitiplos robos.
 
 
+.. toctree::
+   :maxdepth: 2
+   
+   stage/basics
+   stage/world
+   
+   
