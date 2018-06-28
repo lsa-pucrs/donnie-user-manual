@@ -1320,22 +1320,22 @@ simulation.
 
    img
 
-.. |Figure 3.2a| image:: pics/empty_world/gui_nonose_example.png
-.. |Figure 3.2b| image:: pics/empty_world/gui_nose_example.png
-.. |Figure 3.3| image:: pics/empty_world/gui_nonose_example.png
-.. |Figure 3.4a| image:: pics/empty_world/writing.png
-.. |Figure 3.4b| image:: pics/empty_world/helloworld.png
-.. |Figure 3.5| image:: pics/empty_world/finalEmptyWorld.png
-.. |Figure 3.6| image:: pics/robot_building/bigbob1.png
-.. |Figure 3.7| image:: pics/robot_building/bigbob2.png
-.. |Figure 3.8| image:: pics/robot_building/cartesian_grid_wpolars.png
-.. |Figure 3.9| image:: pics/robot_building/yaw_examples.png
-.. |Figure 3.10| image:: pics/robot_building/bigbob_sonars.png
-.. |Figure 3.11| image:: pics/robot_building/bigbob_laser.png
-.. |Figure 3.12| image:: pics/robot_building/final_robot_build_wsensors.png
-.. |Figure 3.13a| image:: pics/oranges_box/ghost_original.png
-.. |Figure 3.13b| image:: pics/oranges_box/ghost_woutline.png
-.. |Figure 3.14a| image:: pics/oranges_box/circle.png
-.. |Figure 3.14b| image:: pics/oranges_box/orange_and_bob.png
-.. |Figure 3.15| image:: pics/oranges_box/final_robot_and_stuff.png
+.. |Figure 3.2a| image:: empty_world/gui_nonose_example.png
+.. |Figure 3.2b| image:: empty_world/gui_nose_example.png
+.. |Figure 3.3| image:: empty_world/gui_nonose_example.png
+.. |Figure 3.4a| image:: empty_world/writing.png
+.. |Figure 3.4b| image:: empty_world/helloworld.png
+.. |Figure 3.5| image:: empty_world/finalEmptyWorld.png
+.. |Figure 3.6| image:: robot_building/bigbob1.png
+.. |Figure 3.7| image:: robot_building/bigbob2.png
+.. |Figure 3.8| image:: robot_building/cartesian_grid_wpolars.png
+.. |Figure 3.9| image:: robot_building/yaw_examples.png
+.. |Figure 3.10| image:: robot_building/bigbob_sonars.png
+.. |Figure 3.11| image:: robot_building/bigbob_laser.png
+.. |Figure 3.12| image:: robot_building/final_robot_build_wsensors.png
+.. |Figure 3.13a| image:: oranges_box/ghost_original.png
+.. |Figure 3.13b| image:: oranges_box/ghost_woutline.png
+.. |Figure 3.14a| image:: oranges_box/circle.png
+.. |Figure 3.14b| image:: oranges_box/orange_and_bob.png
+.. |Figure 3.15| image:: oranges_box/final_robot_and_stuff.png
 
