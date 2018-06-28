@@ -43,6 +43,7 @@ The project is in its second version, developed in the Laboratório de Sistemas 
    docs/godonnie/index
    docs/simulation/index
    docs/robot/index   
+   docs/belt/index
    docs/contributors/index
 
 
