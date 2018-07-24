@@ -54,7 +54,7 @@ inferior à esquerda.
 
 
 
-###Seção 1: sair do terminal de programação
+Seção 1: sair do terminal de programação
 *********************************************
 
 **Comando**
@@ -78,7 +78,7 @@ SAIR
 
 
 
-###Seção 2: declaração de variáveis
+Seção 2: declaração de variáveis
 ************************************
 **Variável** é um objeto que guarda um valor. Essa variável só poderá receber valores inteiros.
 
@@ -95,11 +95,11 @@ x é a variável que será criada. Essa variável recebe valores inteiros.
 **Explicação**
 
 Existem 5 formas de criar uma variável:
-1)  criar uma variável.
-2) criar uma variável e atribui um valor inicial.
-3) criar uma variável que recebe uma expressão.
-4) criar uma variável dentro do comando de repetição PARA.
-5) criar uma variável que receberá o valor de outro comando, como: COR (será visto na seção 8), DISTÂNCIA (será visto na seção 8) e POS (será visto na seção 8).
+1. criar uma variável.
+2. criar uma variável e atribui um valor inicial.
+3. criar uma variável que recebe uma expressão.
+4. criar uma variável dentro do comando de repetição PARA.
+5. criar uma variável que receberá o valor de outro comando, como: COR (será visto na seção 8), DISTÂNCIA (será visto na seção 8) e POS (será visto na seção 8).
 
 As variáveis guardam somente os últimos valores recebidos.
 As variáveis guardam somente valores inteiros. Desta forma, se houver um resultado com vírgula, esse será descartado e somente a parte inteira será armazenada na variável.
@@ -112,55 +112,55 @@ Existem regras para o nome das variáveis:
 
 **Exemplo**
 
-1) Para criar uma variável sem valor inicial, pode-se fazer: 
-
+1. Para criar uma variável sem valor inicial, pode-se fazer: 
+::
 CRIAR A
 Cria uma variável com o nome A.
 A = 2
 Tendo sido criada a variável, pode atribuir um valor diretamente. A variável com o nome A vai armazenar o valor 2.
 
-2) Para criar uma variável com valor inicial, pode-se fazer como a seguir: 
-
+2. Para criar uma variável com valor inicial, pode-se fazer como a seguir: 
+::
 CRIAR B =5
 Cria uma variável chamada B, que armazena o valor 5
 
-3) Para criar uma variável que recebe uma expressão, pode-se fazer como a seguir: 
-
+3. Para criar uma variável que recebe uma expressão, pode-se fazer como a seguir: 
+::
 CRIAR C = A + B
 Cria uma variável chamada C, que recebe o valor da variável A somado ao valor da variável chamada B. O resultado da variável C é 7.
-
+::
 C = 1
 Altera o valor da variável C e armazena o valor 1, perdendo o valor anterior.
 
-4)  Para criar uma variável dentro de um comando PARA (esse comando será visto na seção X do manual), pode ser feito da seguinte forma:
-
+4.  Para criar uma variável dentro de um comando PARA (esse comando será visto na seção X do manual), pode ser feito da seguinte forma:
+::
 PARA CRIAR d = 0;  d < 5; d = d + 1 FAÇA 
 PF 1
 FIM PARA 
 
 O robô se deslocará 5 passos para frente.
 
-5) Para criar uma variável que recebe o valor de outro comando, pode-se fazer como a seguir:
-
+5. Para criar uma variável que recebe o valor de outro comando, pode-se fazer como a seguir:
+::
 CRIAR d = DISTÂNCIA F
 CRIAR c = COR VERDE
 CRIAR px = POS X
- 
+:: 
 A variável d armazenará o valor da distância frontal do robô em relação ao objeto.
 A variável c armazenará a quantidade de cores verdes.
 A variável px armazenará a posição atual do robô no eixo x. 
 (Os comandos Distância F, Cor e Pos x serão vistos na seção x)
-
+::
 G = 5
 Retornará erro porque a variável G ainda não foi criada.
 
 
 
-###Seção 3: comandos de áudio
+Seção 3: comandos de áudio
 ******************************
 Comandos para manipulação e retorno de áudio.
 
-**1)**
+**1.**
 **Comando**
 
 FALAR x
@@ -178,13 +178,13 @@ Este som é emitido pelo robô ou pelo ambiente virtual, dependendo de quem esta
 
 
 **Exemplo**
-
+::
 CRIAR x = 5
 FALAR x
 Será falado: 5
 
 
-**2)**
+**2.**
 **Comando**
 
 FALAR "x"
@@ -201,14 +201,14 @@ Fala a palavra ou frase contida entre as aspas.  Este som é emitido pelo robô 
 
 
 **Exemplo**
-
+::
 FALAR “oi”
 Será falado: oi
 
 
-**3)**
+**3.**
 **Comando**
-
+::
 SOM ligado
 SOM desligado
 
@@ -224,13 +224,13 @@ Comando que liga ou desliga o áudio do recurso que estiver ativo, que poderá s
 
 
 **Exemplo**
-
+::
 SOM LIGADO
 SOM DESLIGADO
 
 
 
-###Seção 4: operadores
+Seção 4: operadores
 ***********************
 São operadores que fornecem suporte a expressões matemáticas e lógicas.
 
@@ -240,13 +240,13 @@ Operadores
 
 
 **Argumentos**
-
+::
 Matemáticos:
 + soma
 - subtração
 * multiplicação
 / divisão
-
+::
 Comparadores: 
 <> diferente
 == igual 
@@ -254,7 +254,7 @@ Comparadores:
 > maior
 <= menor ou igual
 >= maior ou igual
-
+::
 atribuição:
 = atribuição
 
@@ -265,7 +265,7 @@ Operadores servem para comparar valores ou expressões.
 
 
 **Exemplo**
-
+::
 Para realizar uma soma. 
 Criar a = 2
 criando a variável a e atribuindo o valor de 2.
@@ -277,7 +277,7 @@ soma = a + b
 atribuindo a soma o valor da soma da variável a e b.
 Falar soma
 Será falado: 3
-
+::
 Para realizar uma divisão. 
 Criar c = 2
 criando a variável c e atribuindo o valor de 2.
@@ -292,11 +292,11 @@ Será falado: 1
 
 
 
-###Seção 5: comandos de movimentação
+Seção 5: comandos de movimentação
 **************************************
 São comandos que movimentam o robô no ambiente.
 
-**1)**
+**1.**
 **Comando**
 
 PF n 
@@ -318,11 +318,11 @@ Anda n passos para frente.
 PF 5
 
 O robô andará 5 passos para frente. Supondo que o robô está na posição 0, 0 e virado para o norte, o comando PF 5 colocará o robô na posição 5, 0, mantendo a direção para o norte.
-
+::
 CRIAR A = 10
 PF A
 Fará com que o robô ande 10 passos para frente.
-
+::
 CRIAR A=10
 CRIAR B=20
 PF A+B
@@ -330,12 +330,12 @@ Fará com que o robô ande 30 passos para frente.
 
 Se o robô colidir em algo antes de completar a quantidade de passos solicitados. Será informado ao usuário:  “Andei somente X passos para frente. Encontrei obstáculo”. 
 
-Se for digitado o comando com um número negativo como abaixo: 
+Se for digitado o comando com um número negativo como abaixo: ::
 PF -5 
 Será informado ao usuário que o robô andou 0 passos. 
 
 
-**2)**
+**2.**
 **Comando**
 
 PT n
@@ -357,11 +357,11 @@ Anda n passos para trás. É como se andasse de ré.
 PT 5
 
 O robô andará 5 passos para trás. Supondo que o robô está na posição 5, 0 e virado para o norte, o comando PT 5 colocará o robô na posição 0, 0, mantendo a direção para o norte.
-
+::
 CRIAR A = 10
 PT A
 Fará com que o robô ande 10 passos para trás.
-
+::
 CRIAR A=10
 CRIAR B=20
 PF A+B
@@ -369,7 +369,7 @@ Fará com que o robô ande 30 passos para frente.
 
 Se o robô colidir em algo antes de completar a quantidade de passos solicitados. Será informado ao usuário:  “Andei somente X passos para trás. Encontrei obstáculo”. 
 
-Caso seja digitado o comando com número negativo como abaixo:
+Caso seja digitado o comando com número negativo como abaixo: ::
 PT -6
 Será informado, andei 0 passos. 
 
