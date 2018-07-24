@@ -67,7 +67,7 @@ inferior à esquerda.
 +-------------------------------------------------------------------------------------+
 |                     ** Seção 2: Declaração de variáveis**                           |
 |**Variável** é um objeto que guarda um valor. Essa variável só poderá receber valores|
-|inteiros.                                                                           |
+|inteiros.                                                                            |
 +===================+=====================+=====================+=====================+
 |   **Comando**     |   **Argumentos**    |   **Explicação**    |     **Eventos**     |
 +-------------------+---------------------+---------------------+---------------------+
