@@ -122,7 +122,7 @@ Tendo sido criada a variável, pode atribuir um valor diretamente. A variável c
 2. Para criar uma variável com valor inicial, pode-se fazer como a seguir: 
 
 | CRIAR B =5
-| Cria uma variável chamada B, que armazena o valor 5
+Cria uma variável chamada B, que armazena o valor 5
 
 3. Para criar uma variável que recebe uma expressão, pode-se fazer como a seguir: 
 
@@ -130,7 +130,7 @@ Tendo sido criada a variável, pode atribuir um valor diretamente. A variável c
 Cria uma variável chamada C, que recebe o valor da variável A somado ao valor da variável chamada B. O resultado da variável C é 7.
 
 | C = 1
-| Altera o valor da variável C e armazena o valor 1, perdendo o valor anterior.
+Altera o valor da variável C e armazena o valor 1, perdendo o valor anterior.
 
 4.  Para criar uma variável dentro de um comando PARA (esse comando será visto na seção X do manual), pode ser feito da seguinte forma:
 
@@ -138,7 +138,7 @@ Cria uma variável chamada C, que recebe o valor da variável A somado ao valor 
 | PF 1
 | FIM PARA 
 
-| O robô se deslocará 5 passos para frente.
+O robô se deslocará 5 passos para frente.
 
 5. Para criar uma variável que recebe o valor de outro comando, pode-se fazer como a seguir:
 
