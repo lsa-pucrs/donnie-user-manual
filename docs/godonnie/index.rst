@@ -538,7 +538,7 @@ d é a direção do sensor do robô (f - frontal; fd - frontal direita; fe -fron
  
 | 2) Se deseja somente armazenar em uma variável.
 
-3) Se deseja usar diretamente dentro de outro comando, por exemplo:  SE (será visto na seção 9), PARA (será visto na seção 10) , REPITA (será visto na seção 10) ou ENQUANTO (será visto na seção 10).
+| 3) Se deseja usar diretamente dentro de outro comando, por exemplo:  SE, PARA, REPITA ou ENQUANTO.
 
 | Distância F retorna o número de passos do robô até um objeto que foi detectado pelo sensor da parte da frente do robô. 
 
@@ -562,7 +562,7 @@ Não havendo obstáculos, retorna a quantidade de passos que o sensor consegue i
 DISTÂNCIA TD
 
 
-Supondo que o robô está na posição 0,0, virado para o norte e há obstáculos nas seguintes posições, o resultado será:
+1) Supondo que o robô está na posição 0,0, virado para o norte e há obstáculos nas seguintes posições, o resultado será:
 
 | Obstáculo em 0, 3: 
 | FALAR DISTÂNCIA F
@@ -574,7 +574,7 @@ CRIAR  d =  DISTÂNCIA T
 
 Armazena na variável d a distância traseira do robô até o obstáculo que está diretamente atrás dele. Supondo que o Robô está na posição 0,3 virado para o norte e existe um obstáculo em 0,0. O valor armazenado em d será 3.
 
-3) 
+| 3) 
 | SE DISTÂNCIA F>3 ENTÃO
 | PF 1
 | SENÃO
