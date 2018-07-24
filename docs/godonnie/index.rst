@@ -117,7 +117,7 @@ x é a variável que será criada. Essa variável recebe valores inteiros.
 | CRIAR A
 | Cria uma variável com o nome A.
 | A = 2
- Tendo sido criada a variável, pode atribuir um valor diretamente. A variável com o nome A vai armazenar o valor 2.
+Tendo sido criada a variável, pode atribuir um valor diretamente. A variável com o nome A vai armazenar o valor 2.
 
 2. Para criar uma variável com valor inicial, pode-se fazer como a seguir: 
 
@@ -127,7 +127,7 @@ x é a variável que será criada. Essa variável recebe valores inteiros.
 3. Para criar uma variável que recebe uma expressão, pode-se fazer como a seguir: 
 
 | CRIAR C = A + B
- Cria uma variável chamada C, que recebe o valor da variável A somado ao valor da variável chamada B. O resultado da variável C é 7.
+Cria uma variável chamada C, que recebe o valor da variável A somado ao valor da variável chamada B. O resultado da variável C é 7.
 
 | C = 1
 | Altera o valor da variável C e armazena o valor 1, perdendo o valor anterior.
