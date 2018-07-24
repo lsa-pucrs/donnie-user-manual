@@ -99,7 +99,7 @@ x é a variável que será criada. Essa variável recebe valores inteiros.
 | 2. criar uma variável e atribui um valor inicial.
 | 3. criar uma variável que recebe uma expressão.
 | 4. criar uma variável dentro do comando de repetição PARA.
-| 5. criar uma variável que receberá o valor de outro comando, como: COR (será visto na seção 8), DISTÂNCIA (será visto na seção 8) e POS (será visto na seção 8).
+| 5. criar uma variável que receberá o valor de outro comando, como: COR, DISTÂNCIA e POS.
 
 | As variáveis guardam somente os últimos valores recebidos.
  As variáveis guardam somente valores inteiros. Desta forma, se houver um resultado com vírgula, esse será descartado e somente a parte inteira será armazenada na variável.
