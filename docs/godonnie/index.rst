@@ -7,22 +7,6 @@ Donnie Programming Environment
 Introduction
 -------------
 
-.. image:: ./images/donnie.png
-    :align: center
-    :alt: sempre use alt para descreve a imagem p um deficiente visual
-
-explica brevemente, cita o artigo, mostra algum exemplo pronto.
-
-GoDonnie Programming Language
--------------
-
-***************************
-Manual da Linguagem Donnie
-***************************
-
-1.Contexto da GoDonnie
-#######################
-
 A GoDonnie é uma linguagem de programação, que comanda um robô chamado Donnie
 por um cenário. Este robô funciona em um ambiente próprio. Para tal, estando em um
 terminal Linux, é necessário digitar donnie_player e pressionar a tecla ENTER.
@@ -52,10 +36,22 @@ A GoDonnie não diferencia letras minúsculas de maiúsculas.
 O robô sempre parte da posição 0,0 virado para o norte. Esta posição fica no canto
 inferior à esquerda.
 
+.. image:: ./images/donnie.png
+    :align: center
+    :alt: sempre use alt para descreve a imagem p um deficiente visual
+
+explica brevemente, cita o artigo, mostra algum exemplo pronto.
+
+GoDonnie Programming Language
+-------------
+
+***************************
+Manual da Linguagem Donnie
+***************************
 
 
 Seção 1: sair do terminal de programação
-*********************************************
+#########################################
 
 **Comando**
 
@@ -79,7 +75,7 @@ SAIR
 
 
 Seção 2: declaração de variáveis
-************************************
+#################################
 **Variável** é um objeto que guarda um valor. Essa variável só poderá receber valores inteiros.
 
 **Comando**
@@ -157,7 +153,7 @@ O robô se deslocará 5 passos para frente.
 
 
 Seção 3: comandos de áudio
-******************************
+###########################
 Comandos para manipulação e retorno de áudio.
 
 **1.**
@@ -231,7 +227,7 @@ Comando que liga ou desliga o áudio do recurso que estiver ativo, que poderá s
 
 
 Seção 4: operadores
-***********************
+####################
 São operadores que fornecem suporte a expressões matemáticas e lógicas.
 
 **Comando**
@@ -293,7 +289,7 @@ Operadores servem para comparar valores ou expressões.
 
 
 Seção 5: comandos de movimentação
-**************************************
+##################################
 São comandos que movimentam o robô no ambiente.
 
 **1.**
@@ -375,7 +371,7 @@ Se o robô colidir em algo antes de completar a quantidade de passos solicitados
 
 
 Seção 6: comandos de Rotação
-******************************
+#############################
 Rotação sem movimento do robô
 
 **1.**
@@ -452,7 +448,7 @@ O robô gira para o lado direito 90 graus.
 
 
 Seção 7: comandos de visualização do ambiente
-***********************************************
+###############################################
 São comandos para obter informações sobre o ambiente em que o robô está. Não é possível armazenar o retorno desses comandos em variáveis. 
 
 
@@ -514,7 +510,7 @@ Nenhum comando executado, Posição [0, 0, 0].
 
 
 Seção 8: comandos de posição e percepção do ambiente
-*****************************************************
+#####################################################
 São comandos para obter informações sobre o ambiente em que o robô está. É possível armazenar o retorno desses comandos dentro de variáveis. 
 
 
@@ -705,7 +701,7 @@ FIM SE
 
 
 Seção 9: comandos de condição
-*******************************
+##############################
 São comandos condicionais que permitem ao programa fazer a escolha do que executar, de acordo com uma condição estipulada.
 
 **1.**
@@ -768,7 +764,7 @@ Se a variável “a” tiver um valor menor do que 4 então o robô andará 5 pa
 
 
 Seção 10: comandos de repetição
-********************************
+################################
 São comandos de repetição que permitem uma ou mais instruções serem executadas um determinado número de vezes.
 
 **Comando**
@@ -872,7 +868,7 @@ Enquanto a distância da frente do robô em relação ao objeto for maior que 3,
 
 
 Seção 11: declaração de procedimentos
-**************************************
+######################################
 Procedimento é um programa menor (subprograma) que permite decompor e resolver um problema mais complexo em um mais simples. Pode ser chamado em outras partes do programa.
 
 
@@ -924,7 +920,7 @@ RETÂNGULO [9,5]
 
 
 Seção 12: comandos variados
-****************************
+##############################
 
 **1.**
 **Comando**
