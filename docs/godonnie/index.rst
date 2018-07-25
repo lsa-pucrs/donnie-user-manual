@@ -704,6 +704,278 @@ FIM SE
 
 
 
+Seção 9: comandos de condição
+*******************************
+São comandos condicionais que permitem ao programa fazer a escolha do que executar, de acordo com uma condição estipulada.
+
+**1.**
+**Comando**
+
+| SE expressão operador lógico expressão 
+| ENTÃO comandos
+| SENÃO comandos
+FIM SE
+
+
+**Argumentos**
+
+expressão = variável ou expressão.
+
+
+**Explicação**
+
+Testa se uma condição é verdadeira e, em caso afirmativo, executa os primeiros comandos. Caso contrário, executa os comandos da expressão SENÃO. 
+
+
+**Exemplo**
+
+Supondo que, se a variável a for menor do que 4 o robô tenha que andar para frente 5 passos e caso contrário tenha que girar 45 graus para esquerda:
+| CRIAR a = 0
+| SE a<4 
+| ENTÃO PF 5 
+| SENÃO GE 45
+FIM SE
+
+
+
+**2.**
+**Comando**
+
+| SE expressão operador lógico expressão 
+| ENTÃO comandos
+FIM SE
+
+
+**Argumentos**
+
+expressão = variável ou expressão.
+
+
+**Explicação**
+
+Testa se uma condição é verdadeira e, em caso afirmativo, executa os primeiros comandos. 
+
+
+**Exemplo**
+
+| CRIAR a = 0
+| SE a<4
+| ENTÃO PF 5
+FIM SE
+
+Se a variável “a” tiver um valor menor do que 4 então o robô andará 5 passos para frente.
+
+
+
+Seção 10: comandos de repetição
+********************************
+São comandos de repetição que permitem uma ou mais instruções serem executadas um determinado número de vezes.
+
+**Comando**
+
+| PARA inicialização; expressão operador lógico expressão; incremento ou decremento 
+| FAÇA comandos 
+FIM PARA 
+
+
+**Argumentos**
+
+| Inicialização: variável  = algum valor inteiro
+
+variável ou Expressão operador lógico variável ou expressão:
+variável ou expressão - operador lógico - variável ou expressão
+
+| Incremento: variável + constante ou variável + variável
+
+| Decremento: variável - constante ou variável - variável
+
+
+**Explicação**
+
+Repete a sequência de comandos um determinado número de vezes.
+
+
+**Exemplo**
+
+O exemplo faz com que o robô precise andar em direção a um obstáculo que está a sua frente e a cada passo fale “oi”. 
+
+| CRIAR obstaculo = DISTÂNCIA F
+| PARA CRIAR x=1; x<=obstaculo; x=x+1
+| FAÇA  
+| PF 1
+| FALAR “oi”
+FIM PARA
+
+A variável “x” começará com o valor 1 e o robô andará um passo para frente e falará “oi”, enquanto seu valor for menor ou igual a linha do obstáculo que está à sua frente. 
+
+
+**2.**
+**Comando**
+
+| REPITA n VEZES comandos 
+FIM REPITA
+
+
+**Argumentos**
+
+n é o número de vezes que os comandos serão repetidos.
+
+
+**Explicação**
+
+Repete os comandos n vezes.
+
+
+**Exemplo**
+
+| REPITA 4 VEZES 
+| GD 90 
+| PF 2 
+FIM REPITA
+
+Supondo que o robô comece na posição 0,0. Os comandos PF 3  GD 90 serão repetidos 4 vezes. Ao final, o robô terá feito um trajeto similar a um quadrado e finalizará na posição 0,0 virado para o norte.
+
+
+**3.**
+**Comando**
+
+| ENQUANTO
+| expressão operador lógico expressão
+| FAÇA
+| comandos
+FIM ENQUANTO 
+
+
+**Argumentos**
+
+variável ou Expressão operador lógico variável ou expressão:
+variável ou expressão - operador lógico - variável ou expressão
+
+
+**Explicação**
+
+Repete os comandos enquanto  a Expressão-operador lógico-expressão for verdadeira. 
+
+
+**Exemplo**
+
+O exemplo faz com que o robô precise andar em direção a um obstáculo que está a sua frente e a cada passo fale “estou chegando”. 
+
+| ENQUANTO DISTÂNCIA F >3
+| FAÇA  
+| PF 1
+| FALAR “estou chegando”
+FIM ENQUANTO
+
+Enquanto a distância da frente do robô em relação ao objeto for maior que 3, o robô andará um passo para frente e falará “estou chegando”
+
+
+
+Seção 11: declaração de procedimentos
+**************************************
+Procedimento é um programa menor (subprograma) que permite decompor e resolver um problema mais complexo em um mais simples. Pode ser chamado em outras partes do programa.
+
+
+**Comando**
+
+| APRENDER nome: variável1, variável2, variável3, …
+| FAÇA comandos
+FIM APRENDER
+
+
+**Argumentos**
+
+nome é o nome do subprograma e variavel1, variavel2, variavel3  são os argumentos da mesma
+
+
+**Explicação**
+
+| Serve para criar um subprograma. 
+Este comando somente funciona via arquivo.
+
+
+**Exemplo**
+
+O robô precisa caminhar simulando um retângulo. Esse retângulo pode ter tamanhos diferentes, conforme a atividade. Por isso, pode ser utilizado o comando APRENDER para criar um procedimento único chamado RETÂNGULO que receberia duas variáveis, uma para o tamanho da altura e a outra para o tamanho da base. Assim, esse procedimento poderia ser utilizado para fazer retângulos de tamanhos diferentes.
+
+| APRENDER RETÂNGULO: base, altura
+| FAÇA
+| PF base GD 90 
+| PF altura GD 90
+| PF base GD 90
+| PF altura GD 90 
+FIM APRENDER
+
+Ou
+
+| APRENDER RETÂNGULO: base, altura
+| FAÇA
+| REPITA 2 VEZES
+| PF base GD 90 
+| PF altura GD 90
+| FIM REPITA
+FIM APRENDER
+
+| chamada do subprograma
+| RETÂNGULO [5,3]
+| RETÂNGULO [8,4]
+RETÂNGULO [9,5]
+
+
+
+Seção 12: comandos variados
+****************************
+
+**1.**
+**Comando**
+
+ESPERAR t
+
+
+**Argumentos**
+
+t é o tempo em segundos
+
+
+**Explicação**
+
+Espera t segundos para executar o próximo comando.
+
+
+**Exemplo**
+
+| Se o robô deve andar para frente 2 passos, esperar 3 segundos e andar mais 4 passos:
+| PF 2 
+| ESPERAR 3
+PF 4
+
+
+**2.**
+**Comando**
+
+--
+
+
+**Argumentos**
+
+nenhum
+
+
+**Explicação**
+
+Após esse símbolo -- tudo que for escrito na linha que possui -- não será executado. São lembretes sobre o código.
+
+
+**Exemplo**
+
+-- Isto é um comentário.
+
+
+
+
+
+
+
 manual da linguagem e eexemplos de uso.
 colocar os exercicios como se fossem subsecoes.
 
