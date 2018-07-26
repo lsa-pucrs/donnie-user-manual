@@ -1,10 +1,10 @@
 .. _godonnie:
 
 ===============
-Donnie Programming Environment 
+Ambiente de Programação Donnie
 ===============
 
-Introduction
+Introdução
 -------------
 
 A GoDonnie é uma linguagem de programação, que comanda um robô chamado Donnie
@@ -42,8 +42,8 @@ inferior à esquerda.
 
 explica brevemente, cita o artigo, mostra algum exemplo pronto.
 
-GoDonnie Programming Language
--------------
+Linguagem de Programação GoDonnie
+----------------------------------
 
 ***************************
 Manual da Linguagem Donnie
