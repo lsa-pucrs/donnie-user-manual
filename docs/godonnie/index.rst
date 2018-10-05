@@ -36,12 +36,6 @@ A GoDonnie não diferencia letras minúsculas de maiúsculas.
 O robô sempre parte da posição 0,0 virado para o norte. Esta posição fica no canto
 inferior à esquerda.
 
-.. image:: ./images/donnie.png
-    :align: center
-    :alt: sempre use alt para descreve a imagem p um deficiente visual
-
-explica brevemente, cita o artigo, mostra algum exemplo pronto.
-
 Linguagem de Programação GoDonnie
 ----------------------------------
 
