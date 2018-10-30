@@ -60,9 +60,9 @@ Explicação
 
 Exemplo
 
-::
+    ::
 
-    SAIR
+        SAIR
 
 
 
@@ -71,13 +71,14 @@ Seção 2: declaração de variáveis
 **Variável** é um objeto que guarda um valor. Essa variável só poderá receber valores inteiros.
 
 Comando
-    ``CRIAR x``
+    ``CRIAR`` x
 
 Argumentos
     x é a variável que será criada. Essa variável recebe valores inteiros.
 
 Explicação
     Existem 5 formas de criar uma variável:
+
     1. criar uma variável.
     2. criar uma variável e atribui um valor inicial.
     3. criar uma variável que recebe uma expressão.
@@ -88,79 +89,78 @@ Explicação
     As variáveis guardam somente valores inteiros. Desta forma, se houver um resultado com vírgula, esse será descartado e somente a parte inteira será armazenada na variável.
 
     Existem regras para o nome das variáveis:
+
 -   Não há diferença entre letras maiúsculas e minúsculas. Desta forma, CRIAR A (maiúsculo) será o mesmo que CRIAR a (minúsculo).
 -   Não podem ter caracteres especiais. Exemplo: *, @, #, +
 -   Não podem iniciar com número. Exemplo: CRIAR 52abc está errado.
 
 
-**Exemplo**
+Exemplo
 
+    1. Para criar uma variável sem valor inicial, pode-se fazer: 
 
+    ::
 
-1. Para criar uma variável sem valor inicial, pode-se fazer: 
+        CRIAR A
 
-::
+    Cria uma variável com o nome A.
 
-    CRIAR A
+    ::
 
- Cria uma variável com o nome A.
+        A = 2
 
-::
+    Tendo sido criada a variável, pode atribuir um valor diretamente. A variável com o nome A vai armazenar o valor 2.
 
-     A = 2
+    2. Para criar uma variável com valor inicial, pode-se fazer como a seguir: 
 
-Tendo sido criada a variável, pode atribuir um valor diretamente. A variável com o nome A vai armazenar o valor 2.
+    ::
 
-2. Para criar uma variável com valor inicial, pode-se fazer como a seguir: 
+        CRIAR B =5
 
-::
+    Cria uma variável chamada B, que armazena o valor 5
 
-    CRIAR B =5
+    3. Para criar uma variável que recebe uma expressão, pode-se fazer como a seguir: 
 
-Cria uma variável chamada B, que armazena o valor 5
+    ::
 
-3. Para criar uma variável que recebe uma expressão, pode-se fazer como a seguir: 
+        CRIAR C = A + B
 
-::
+    Cria uma variável chamada C, que recebe o valor da variável A somado ao valor da variável chamada B. O resultado da variável C é 7.
 
-    CRIAR C = A + B
+    ::
 
-Cria uma variável chamada C, que recebe o valor da variável A somado ao valor da variável chamada B. O resultado da variável C é 7.
+        C = 1
 
-::
+    Altera o valor da variável C e armazena o valor 1, perdendo o valor anterior.
 
-    C = 1
+    4.  Para criar uma variável dentro de um comando PARA (esse comando será visto na seção X do manual), pode ser feito da seguinte forma:
 
-Altera o valor da variável C e armazena o valor 1, perdendo o valor anterior.
+    ::
 
-4.  Para criar uma variável dentro de um comando PARA (esse comando será visto na seção X do manual), pode ser feito da seguinte forma:
+        PARA CRIAR d = 0;  d < 5; d = d + 1 FAÇA 
+        PF 1
+        FIM PARA 
 
-::
+    O robô se deslocará 5 passos para frente.
 
-    PARA CRIAR d = 0;  d < 5; d = d + 1 FAÇA 
-    PF 1
-    FIM PARA 
+    5. Para criar uma variável que recebe o valor de outro comando, pode-se fazer como a seguir:
 
-O robô se deslocará 5 passos para frente.
+    ::
 
-5. Para criar uma variável que recebe o valor de outro comando, pode-se fazer como a seguir:
+        CRIAR d = DISTÂNCIA F
+        CRIAR c = COR VERDE
+        CRIAR px = POS X
 
-::
+    - A variável d armazenará o valor da distância frontal do robô em relação ao objeto.
+    - A variável c armazenará a quantidade de cores verdes.
+    - A variável px armazenará a posição atual do robô no eixo x. 
+    - (Os comandos Distância F, Cor e Pos x serão vistos na seção x)
 
-    CRIAR d = DISTÂNCIA F
-    CRIAR c = COR VERDE
-    CRIAR px = POS X
+    ::
 
- -  A variável d armazenará o valor da distância frontal do robô em relação ao objeto.
- -  A variável c armazenará a quantidade de cores verdes.
- -  A variável px armazenará a posição atual do robô no eixo x. 
- -  (Os comandos Distância F, Cor e Pos x serão vistos na seção x)
+        G = 5
 
-::
-
-    G = 5
-
- Retornará erro porque a variável G ainda não foi criada.
+    Retornará erro porque a variável G ainda não foi criada.
 
 
 
@@ -170,7 +170,7 @@ Comandos para manipulação e retorno de áudio.
 
 **1.**
 Comando
-    ``FALAR x``
+    ``FALAR`` x
 
 
 Argumentos
@@ -182,18 +182,19 @@ Explicação
     Este som é emitido pelo robô ou pelo ambiente virtual, dependendo de quem estará ativo.
 
 
-**Exemplo**
+Exemplo
 
-::
+    ::
 
-    CRIAR x = 5
-    FALAR x
+        CRIAR x = 5
+        FALAR x
+
     Será falado: 5
 
 
 **2.**
 Comando
-    ``FALAR "x"``
+    ``FALAR`` "x"
 
 
 Argumentos
@@ -204,11 +205,12 @@ Explicação
     Fala a palavra ou frase contida entre as aspas.  Este som é emitido pelo robô ou pelo ambiente virtual, dependendo de quem estará ativo.
 
 
-**Exemplo**
+Exemplo
+        
+    ::
 
-::
+        FALAR “oi”
 
-    FALAR “oi”
     Será falado: oi
 
 
@@ -226,12 +228,12 @@ Explicação
     Comando que liga ou desliga o áudio do recurso que estiver ativo, que poderá ser o robô ou o ambiente virtual. 
 
 
-**Exemplo**
+Exemplo
 
-::
+    ::
 
-    SOM LIGADO
-    SOM DESLIGADO
+        SOM LIGADO
+        SOM DESLIGADO
 
 
 
@@ -244,93 +246,92 @@ Comando
 
 
 Argumentos
-    Matemáticos:
-    + soma
-    - subtração
-    * multiplicação
-    / divisão
+    | `Matemáticos:`
+    | ``+ soma``
+    | ``- subtração``
+    | ``* multiplicação``
+    ``/ divisão``
 
-    Comparadores: 
-    <> diferente
-    == igual 
-    < menor
-    > maior
-    <= menor ou igual
-    >= maior ou igual
+    | `Comparadores:` 
+    | ``<> diferente``
+    | ``== igual`` 
+    | ``< menor``
+    | ``> maior``
+    | ``<= menor ou igual``
+    | ``>= maior ou igual``
 
-    atribuição:
-    = atribuição
+    | `atribuição:`
+    ``= atribuição``
 
 
 Explicação
     Operadores servem para comparar valores ou expressões.
 
 
-**Exemplo**
+Exemplo
+    `Para realizar uma soma:`
 
-Para realizar uma soma.
+    ::
 
-::
+        Criar a = 2
 
-    Criar a = 2
+    criando a variável a e atribuindo o valor de 2.
 
-criando a variável a e atribuindo o valor de 2.
+    ::
 
-::
+        Criar b = 1
 
-    Criar b = 1
+    Criando a variável b e atribuindo o valor de 1.
 
-Criando a variável b e atribuindo o valor de 1.
+    ::
 
-::
+        Criar soma
 
-    Criar soma
+    Criando a variável soma
 
-Criando a variável soma
+    ::
 
-::
+        soma = a + b 
 
-    soma = a + b 
+    atribuindo a soma o valor da soma da variável a e b.
 
-atribuindo a soma o valor da soma da variável a e b.
+    ::
 
-::
+        Falar soma
 
-Falar soma
+    Será falado: 3
 
-Será falado: 3
+    `Para realizar uma divisão:` 
 
-Para realizar uma divisão. 
+    ::
 
-::
+        Criar c = 2
 
-    Criar c = 2
+    criando a variável c e atribuindo o valor de 2.
 
-criando a variável c e atribuindo o valor de 2.
+    ::
 
-::
+        Criar d = 2
 
-Criar d = 2
+    Criando a variável d e atribuindo o valor de 2.
 
-criando a variável d e atribuindo o valor de 2.
+    ::
 
-::
+        Criar divisão
 
-    Criar divisão
+    Criando a variável divisão
 
-Criando a variável divisão
+    ::
 
-::
+        divisão = c / d 
 
-    divisão = c / d 
+    Atribuindo o valor da divisão dos conteúdos das variáveis c e d.
 
-Atribuindo o valor da divisão dos conteúdos das variáveis c e d.
+    ::
 
-::
+        Falar divisão
 
-    Falar divisão
-
-Será falado: 1
+    Será falado: 1
 
 
 
@@ -340,7 +341,7 @@ São comandos que movimentam o robô no ambiente.
 
 **1.**
 Comando
-    ``PF n`` 
+    ``PF`` n 
 
 
 Argumentos
@@ -352,43 +353,43 @@ Explicação
     Anda n passos para frente.
 
 
-**Exemplo**
+Exemplo
 
-::
+    ::
 
-    PF 5
+        PF 5
 
-O robô andará 5 passos para frente. Supondo que o robô está na posição 0, 0 e virado para o norte, o comando PF 5 colocará o robô na posição 5, 0, mantendo a direção para o norte.
+    O robô andará 5 passos para frente. Supondo que o robô está na posição 0, 0 e virado para o norte, o comando PF 5 colocará o robô na posição 5, 0, mantendo a direção para o norte.
 
-::
+    ::
 
-    CRIAR A = 10
-    PF A
+        CRIAR A = 10
+        PF A
 
-Fará com que o robô ande 10 passos para frente.
+    Fará com que o robô ande 10 passos para frente.
 
-::
+    ::
 
-    CRIAR A=10
-    CRIAR B=20
-    PF A+B
+        CRIAR A=10
+        CRIAR B=20
+        PF A+B
 
-Fará com que o robô ande 30 passos para frente.
+    Fará com que o robô ande 30 passos para frente.
 
-Se o robô colidir em algo antes de completar a quantidade de passos solicitados. Será informado ao usuário:  “Andei somente X passos para frente. Encontrei obstáculo”. 
+    Se o robô colidir em algo antes de completar a quantidade de passos solicitados. Será informado ao usuário:  ``“Andei somente X passos para frente. Encontrei obstáculo”``. 
 
-Se for digitado o comando com um número negativo como abaixo:
+    Se for digitado o comando com um número negativo como abaixo:
 
-::
+    ::
 
-    PF -5
+        PF -5
 
-Será informado ao usuário que o robô andou 0 passos. 
+    Será informado ao usuário que o robô andou 0 passos. 
 
 
 **2.**
 Comando
-    ``PT n``
+    ``PT`` n
 
 
 Argumentos
@@ -400,37 +401,37 @@ Explicação
     Anda n passos para trás. É como se andasse de ré. 
 
 
-**Exemplo**
+Exemplo
 
-::
+    ::
 
-    PT 5
+        PT 5
 
-O robô andará 5 passos para trás. Supondo que o robô está na posição 5, 0 e virado para o norte, o comando PT 5 colocará o robô na posição 0, 0, mantendo a direção para o norte.
+    O robô andará 5 passos para trás. Supondo que o robô está na posição 5, 0 e virado para o norte, o comando PT 5 colocará o robô na posição 0, 0, mantendo a direção para o norte.
 
-::
+    ::
 
-    CRIAR A = 10
-    PT A
+        CRIAR A = 10
+        PT A
 
-Fará com que o robô ande 10 passos para trás.
+    Fará com que o robô ande 10 passos para trás.
 
-::
+    ::
 
-    CRIAR A=10
-    CRIAR B=20
-    PT A+B
-Fará com que o robô ande 30 passos para trás.
+        CRIAR A=10
+        CRIAR B=20
+        PT A+B
+    Fará com que o robô ande 30 passos para trás.
 
-Se o robô colidir em algo antes de completar a quantidade de passos solicitados. Será informado ao usuário:  “Andei somente X passos para trás. Encontrei obstáculo”. 
+    Se o robô colidir em algo antes de completar a quantidade de passos solicitados. Será informado ao usuário:  “Andei somente X passos para trás. Encontrei obstáculo”. 
 
-Caso seja digitado o comando com número negativo como abaixo: 
+    Caso seja digitado o comando com número negativo como abaixo: 
 
-::
+    ::
 
-    PT -6
+        PT -6
 
-Será informado, andei 0 passos. 
+    Será informado, andei 0 passos. 
 
 
 Seção 6: comandos de Rotação
@@ -439,7 +440,7 @@ Rotação sem movimento do robô
 
 **1.**
 Comando
-    ``GD n``
+    ``GD`` n
 
 
 Argumentos
@@ -451,39 +452,39 @@ Explicação
     Gira n graus para direita. Não há deslocamento do robô.
 
 
-**Exemplo**
+Exemplo
 
-::
+    ::
 
-    GD 90
+        GD 90
 
-O robô irá girar 90 graus para direita. Supondo que o robô está virado para o norte, o comando GD 90 irá girar o robô 90 graus para a direita, mantendo-o na  direção leste.
+    O robô irá girar 90 graus para direita. Supondo que o robô está virado para o norte, o comando GD 90 irá girar o robô 90 graus para a direita, mantendo-o na  direção leste.
 
-::
+    ::
 
-    CRIAR A = 45
-    GD A
+        CRIAR A = 45
+        GD A
 
-Fará com que o robô gire 45 graus para a direita.
+    Fará com que o robô gire 45 graus para a direita.
 
-::
+    ::
 
-    CRIAR A=80
-    CRIAR B=10
-    GD A+B
+        CRIAR A=80
+        CRIAR B=10
+        GD A+B
 
-Fará com que o robô gire 90 graus para a direita.
+    Fará com que o robô gire 90 graus para a direita.
 
-::
+    ::
 
-    GD -90
+        GD -90
 
-O robô gira para o lado esquerdo 90 graus. 
+    O robô gira para o lado esquerdo 90 graus. 
 
 
 **2.**
 Comando
-    ``GE n``
+    ``GE`` n
 
 
 Argumentos
@@ -496,34 +497,34 @@ Explicação
     Gira n graus para esquerda. Não há deslocamento do robô.
 
 
-**Exemplo**
+Exemplo
 
-::
+    ::
 
-    GE 90
+        GE 90
 
-O robô irá girar 90 graus para esquerda. Supondo que o robô está virado para o leste, o comando GE 90 irá girar o robô 90 graus para a esquerda, mantendo-o na  direção norte.
+    O robô irá girar 90 graus para esquerda. Supondo que o robô está virado para o leste, o comando GE 90 irá girar o robô 90 graus para a esquerda, mantendo-o na  direção norte.
 
-::
+    ::
 
-    CRIAR A = 45
-    GE A
+        CRIAR A = 45
+        GE A
 
-Fará com que o robô gire 45 graus para a esquerda.
+    Fará com que o robô gire 45 graus para a esquerda.
 
-::
+    ::
 
-    CRIAR A=80
-    CRIAR B=10
-    GE A+B
+        CRIAR A=80
+        CRIAR B=10
+        GE A+B
 
-Fará com que o robô gire 90 graus para a esquerda.
+    Fará com que o robô gire 90 graus para a esquerda.
 
-::
+    ::
 
-    GE -90
+        GE -90
 
-O robô gira para o lado direito 90 graus. 
+    O robô gira para o lado direito 90 graus. 
 
 
 
@@ -544,20 +545,19 @@ Explicação
     Retorna a identificação do objeto, um ângulo aproximado e a distância aproximada de colisão entre o robô e o objeto identificado. O rastreamento para identificação dos objetos ocorre a 90 graus a esquerda e a direita da frente do robô.
 
 
-**Exemplo**
+Exemplo
+    Supondo que o robô está na posição 2,3, virado para o norte, e que há um obstáculo verde na posição 0,5 e outro obstáculo vermelho na posição 6,3.
 
-Supondo que o robô está na posição 2,3, virado para o norte, e que há um obstáculo verde na posição 0,5 e outro obstáculo vermelho na posição 6,3.
+    ::
 
-::
+        ESPIAR
 
-    ESPIAR
+    Será falado: 
+    ``a  40 graus a esquerda: 1 objeto de cor verde a 2 passos.`` 
+    ``90 graus a direita: 1 objeto da cor vermelha a 4 passos.``
 
-Será falado: 
-``a  40 graus a esquerda: 1 objeto de cor verde a 2 passos.`` 
-``90 graus a direita: 1 objeto da cor vermelha a 4 passos.``
-
-No caso de dois objetos no mesmo ângulo será informado: 
-``a 30% a esquerda: dois objetos de cores verde, vermelho a 17 passos.`` 
+    No caso de dois objetos no mesmo ângulo será informado: 
+    ``a 30% a esquerda: dois objetos de cores verde, vermelho a 17 passos.`` 
 
 
 **2.**
@@ -573,19 +573,19 @@ Explicação
     Retorna a posição no eixo X, Y e o ângulo do robô e informa o último comando digitado de rotação ou de deslocamento, anterior ao comando ESTADO.
 
 
-**Exemplo**
+Exemplo
 
-::
+    ::
 
-    PF 3 ESTADO
+        PF 3 ESTADO
 
-Supondo que o robô estava em 0,0. O robô andará 3 passos para frente e informará “Comando 1 foi PF 3, andou 3, não bateu, posição [3,0,0]. O 3 corresponde ao eixo x, o primeiro 0 ao eixo y e o último 0 ao ângulo do robô. 
- 
-Caso o robô tenha colidido em algo completando apenas 2 passos com sucesso, o ESTADO retornará: 
-``“Comando 1 foi PF 3, andou 2, bateu, posição [2,0,0]”``. O 2 corresponde ao eixo x, o primeiro 0 ao eixo y e o último 0 ao ângulo do robô.
+    Supondo que o robô estava em 0,0. O robô andará 3 passos para frente e informará “Comando 1 foi PF 3, andou 3, não bateu, posição [3,0,0]. O 3 corresponde ao eixo x, o primeiro 0 ao eixo y e o último 0 ao ângulo do robô. 
+    
+    Caso o robô tenha colidido em algo completando apenas 2 passos com sucesso, o ESTADO retornará: 
+    ``“Comando 1 foi PF 3, andou 2, bateu, posição [2,0,0]”``. O 2 corresponde ao eixo x, o primeiro 0 ao eixo y e o último 0 ao ângulo do robô.
 
-Não havendo comandos digitados anteriormente, retornará: 
-``"Nenhum comando executado, Posição [0, 0, 0]"``. 
+    Não havendo comandos digitados anteriormente, retornará: 
+    ``"Nenhum comando executado, Posição [0, 0, 0]"``. 
 
 
 Seção 8: comandos de posição e percepção do ambiente
@@ -595,7 +595,7 @@ São comandos para obter informações sobre o ambiente em que o robô está. É
 
 **1.**
 Comando
-    ``DISTÂNCIA d``
+    ``DISTÂNCIA`` d
 
 
 Argumentos
@@ -620,61 +620,61 @@ Explicação
 
 
 
-**Exemplo**
+Exemplo
 
-::
+    ::
 
-    DISTÂNCIA F
-    DISTÂNCIA FD
-    DISTÂNCIA FE
-    DISTÂNCIA T
-    DISTÂNCIA TE
-    DISTÂNCIA TD
+        DISTÂNCIA F
+        DISTÂNCIA FD
+        DISTÂNCIA FE
+        DISTÂNCIA T
+        DISTÂNCIA TE
+        DISTÂNCIA TD
 
 
-1. Supondo que o robô está na posição 0,0, virado para o norte e há obstáculos nas seguintes posições, o resultado será:
+    1. Supondo que o robô está na posição 0,0, virado para o norte e há obstáculos nas seguintes posições, o resultado será:
 
-Obstáculo em 0, 3: 
+    Obstáculo em 0, 3: 
 
-:: 
+    :: 
 
-    FALAR DISTÂNCIA F
+        FALAR DISTÂNCIA F
 
-Resposta: 3 passos
+    Resposta: 3 passos
 
-2. Você pode criar uma variável previamente, para depois utilizar para armazenar o retorno do comando ``DISTÂNCIA``
+    2. Você pode criar uma variável previamente, para depois utilizar para armazenar o retorno do comando ``DISTÂNCIA``
 
-::
+    ::
 
-    CRIAR  d =  DISTÂNCIA T
+        CRIAR  d =  DISTÂNCIA T
 
-Armazena na variável d a distância traseira do robô até o obstáculo que está diretamente atrás dele. Supondo que o Robô está na posição 0,3 virado para o norte e existe um obstáculo em 0,0. O valor armazenado em d será 3.
+    Armazena na variável d a distância traseira do robô até o obstáculo que está diretamente atrás dele. Supondo que o Robô está na posição 0,3 virado para o norte e existe um obstáculo em 0,0. O valor armazenado em d será 3.
 
-3. 
+    3. 
 
-::
+    ::
 
-    SE DISTÂNCIA F>3 ENTÃO
-    PF 1
-    SENÃO
-    FALAR “não é possível andar para frente”
-    FIM SE
+        SE DISTÂNCIA F>3 ENTÃO
+        PF 1
+        SENÃO
+        FALAR “não é possível andar para frente”
+        FIM SE
 
-No exemplo acima, se a distância frontal do robô for maior que 3, o robô andará 1 passo para frente. Se for igual ou menor a 3, irá falar “não é possível andar para frente”.
+    No exemplo acima, se a distância frontal do robô for maior que 3, o robô andará 1 passo para frente. Se for igual ou menor a 3, irá falar “não é possível andar para frente”.
 
-::
+    ::
 
-    ENQUANTO DISTÂNCIA F>3 
-    FAÇA
-    PF 1
-    FIM ENQUANTO
+        ENQUANTO DISTÂNCIA F>3 
+        FAÇA
+        PF 1
+        FIM ENQUANTO
 
-No exemplo acima, enquanto a distância frontal do robô em relação ao objeto for maior que 3, andará 1 passo para frente. 
+    No exemplo acima, enquanto a distância frontal do robô em relação ao objeto for maior que 3, andará 1 passo para frente. 
 
 
 **2.**
 Comando
-    ``POS k``
+    ``POS`` k
 
 
 Argumentos
@@ -693,63 +693,63 @@ Explicação
 
 
 
-**Exemplo**
+Exemplo
 
-1. Se o usuário desejar escutar o retorno, pode-se fazer como a seguir:
-Supondo que o robô está na posição 0,0 virado para o norte:
+    1. Se o usuário desejar escutar o retorno, pode-se fazer como a seguir:
+    Supondo que o robô está na posição 0,0 virado para o norte:
 
-::
+    ::
 
-    FALAR POS x
+        FALAR POS x
 
-será falado 0
+    será falado 0
 
-::
+    ::
 
-    FALAR POS y
+        FALAR POS y
 
-será falado 0
+    será falado 0
 
-::
+    ::
 
-FALAR POS a
+    FALAR POS a
 
-Será falado 0
+    Será falado 0
 
-2. Se deseja somente armazenar o valor da posição, pode-se fazer como a seguir:
+    2. Se deseja somente armazenar o valor da posição, pode-se fazer como a seguir:
 
-::
+    ::
 
-    CRIAR z = POS x 
+        CRIAR z = POS x 
 
-A variável z possui a posição do robô no eixo x.
+    A variável z possui a posição do robô no eixo x.
 
-::
+    ::
 
-    CRIAR b = POS y 
+        CRIAR b = POS y 
 
-A variável b contém a posição do robô no eixo y. 
+    A variável b contém a posição do robô no eixo y. 
 
-::
+    ::
 
-    CRIAR i = POS a
+        CRIAR i = POS a
 
-A variável i contém o ângulo do robô.  
+    A variável i contém o ângulo do robô.  
 
-3. Se deseja utilizar diretamente dentro de outros comandos, pode-se fazer como a seguir:
+    3. Se deseja utilizar diretamente dentro de outros comandos, pode-se fazer como a seguir:
 
-::
+    ::
 
-    SE POS b > 0 ENTÃO 
-    PF 5
-    SENÃO 
-    PT 5
-    FIM SE
+        SE POS b > 0 ENTÃO 
+        PF 5
+        SENÃO 
+        PT 5
+        FIM SE
 
 
 **3.**
 Comando
-    ``COR c``
+    ``COR`` c
 
 
 Argumentos
@@ -766,54 +766,54 @@ Explicação
     3. Se deseja usar diretamente dentro de outro comando, por exemplo:  SE, PARA, REPITA ou ENQUANTO. 
 
 
-**Exemplo**
+Exemplo
 
-1. Se o usuário desejar escutar o retorno, pode-se fazer como a seguir:
-Supondo que há 1 objeto verde e 2 azuis
+    1. Se o usuário desejar escutar o retorno, pode-se fazer como a seguir:
+    Supondo que há 1 objeto verde e 2 azuis
 
-::
+    ::
 
-FALAR COR azul
+    FALAR COR azul
 
-será falado 2
+    será falado 2
 
-::
+    ::
 
-    FALAR COR verde
+        FALAR COR verde
 
-será falado 1
+    será falado 1
 
-2. Se deseja somente armazenar o valor da cor, pode-se fazer como a seguir:
+    2. Se deseja somente armazenar o valor da cor, pode-se fazer como a seguir:
 
-::
+    ::
 
-    CRIAR A = COR AZUL
+        CRIAR A = COR AZUL
 
-A variável A possui a quantidade de objetos azuis 
+    A variável A possui a quantidade de objetos azuis 
 
-::
+    ::
 
-    CRIAR V = COR VERDE
+        CRIAR V = COR VERDE
 
-A variável V contém a quantidade de objetos verdes.
+    A variável V contém a quantidade de objetos verdes.
 
-3. Se deseja utilizar diretamente dentro de outros comandos, pode-se fazer como a seguir:
+    3. Se deseja utilizar diretamente dentro de outros comandos, pode-se fazer como a seguir:
 
-::
+    ::
 
-    SE COR AZUL > 0 ENTÃO 
-    FALAR “Número de objetos azuis”
-    FALAR COR AZUL
-    SENÃO 
-    FALAR "Não encontrei objetos azuis"
-    FIM SE
+        SE COR AZUL > 0 ENTÃO 
+        FALAR “Número de objetos azuis”
+        FALAR COR AZUL
+        SENÃO 
+        FALAR "Não encontrei objetos azuis"
+        FIM SE
 
-    SE COR VERDE > 0 ENTÃO 
-    FALAR “Número de objetos verdes”
-    FALAR COR VERDE
-    SENÃO 
-    FALAR "Não encontrei objetos verdes"
-    FIM SE
+        SE COR VERDE > 0 ENTÃO 
+        FALAR “Número de objetos verdes”
+        FALAR COR VERDE
+        SENÃO 
+        FALAR "Não encontrei objetos verdes"
+        FIM SE
 
 
 
@@ -823,59 +823,58 @@ São comandos condicionais que permitem ao programa fazer a escolha do que execu
 
 **1.**
 Comando
-    SE expressão operador lógico expressão 
-    ENTÃO comandos
-    SENÃO comandos
-    FIM SE
+    | ``SE`` expressão operador lógico expressão
+    | ``ENTÃO`` comandos
+    | ``SENÃO`` comandos
+    ``FIM SE``
 
 
-**Argumentos**
-
-expressão = variável ou expressão.
-
-
-**Explicação**
-
-Testa se uma condição é verdadeira e, em caso afirmativo, executa os primeiros comandos. Caso contrário, executa os comandos da expressão SENÃO. 
+Argumentos
+    expressão = variável ou expressão.
 
 
-**Exemplo**
+Explicação
+    Testa se uma condição é verdadeira e, em caso afirmativo, executa os primeiros comandos. Caso contrário, executa os comandos da expressão SENÃO. 
 
-Supondo que, se a variável a for menor do que 4 o robô tenha que andar para frente 5 passos e caso contrário tenha que girar 45 graus para esquerda:
-| CRIAR a = 0
-| SE a<4 
-| ENTÃO PF 5 
-| SENÃO GE 45
-FIM SE
+
+Exemplo
+    Supondo que, se a variável a for menor do que 4 o robô tenha que andar para frente 5 passos e caso contrário tenha que girar 45 graus para esquerda:
+
+    ::
+
+        CRIAR a = 0
+        SE a<4 
+        ENTÃO PF 5 
+        SENÃO GE 45
+        FIM SE
 
 
 
 **2.**
-**Comando**
-
-| SE expressão operador lógico expressão 
-| ENTÃO comandos
-FIM SE
-
-
-**Argumentos**
-
-expressão = variável ou expressão.
+Comando
+    | ``SE`` expressão operador lógico expressão 
+    | ``ENTÃO`` comandos
+    ``FIM SE``
 
 
-**Explicação**
+Argumentos
+    expressão = variável ou expressão.
 
-Testa se uma condição é verdadeira e, em caso afirmativo, executa os primeiros comandos. 
+
+Explicação
+    Testa se uma condição é verdadeira e, em caso afirmativo, executa os primeiros comandos. 
 
 
-**Exemplo**
+Exemplo
 
-| CRIAR a = 0
-| SE a<4
-| ENTÃO PF 5
-FIM SE
+    ::
 
-Se a variável “a” tiver um valor menor do que 4 então o robô andará 5 passos para frente.
+        CRIAR a = 0
+        SE a<4
+        ENTÃO PF 5
+        FIM SE
+
+    Se a variável “a” tiver um valor menor do que 4 então o robô andará 5 passos para frente.
 
 
 
@@ -883,103 +882,96 @@ Seção 10: comandos de repetição
 ################################
 São comandos de repetição que permitem uma ou mais instruções serem executadas um determinado número de vezes.
 
-**Comando**
-
-| PARA inicialização; expressão operador lógico expressão; incremento ou decremento 
-| FAÇA comandos 
-FIM PARA 
-
-
-**Argumentos**
-
-| Inicialização: variável  = algum valor inteiro
-
-variável ou Expressão operador lógico variável ou expressão:
-variável ou expressão - operador lógico - variável ou expressão
-
-| Incremento: variável + constante ou variável + variável
-
-| Decremento: variável - constante ou variável - variável
+Comando
+    | ``PARA`` inicialização; expressão operador lógico expressão; incremento ou decremento 
+    | ``FAÇA`` comandos 
+    ``FIM PARA`` 
 
 
-**Explicação**
+Argumentos
+    | Inicialização: variável  = algum valor inteiro
 
-Repete a sequência de comandos um determinado número de vezes.
+    variável ou Expressão operador lógico variável ou expressão:
+    variável ou expressão - operador lógico - variável ou expressão
+
+    | Incremento: variável + constante ou variável + variável
+
+    | Decremento: variável - constante ou variável - variável
 
 
-**Exemplo**
+Explicação
+    Repete a sequência de comandos um determinado número de vezes.
 
-O exemplo faz com que o robô precise andar em direção a um obstáculo que está a sua frente e a cada passo fale “oi”. 
 
-| CRIAR obstaculo = DISTÂNCIA F
-| PARA CRIAR x=1; x<=obstaculo; x=x+1
-| FAÇA  
-| PF 1
-| FALAR “oi”
-FIM PARA
+Exemplo
+    O exemplo faz com que o robô precise andar em direção a um obstáculo que está a sua frente e a cada passo fale “oi”. 
 
-A variável “x” começará com o valor 1 e o robô andará um passo para frente e falará “oi”, enquanto seu valor for menor ou igual a linha do obstáculo que está à sua frente. 
+    ::    
+
+        CRIAR obstaculo = DISTÂNCIA F
+        PARA CRIAR x=1; x<=obstaculo; x=x+1
+        FAÇA  
+        PF 1
+        FALAR “oi”
+        FIM PARA
+
+    A variável “x” começará com o valor 1 e o robô andará um passo para frente e falará “oi”, enquanto seu valor for menor ou igual a linha do obstáculo que está à sua frente. 
 
 
 **2.**
-**Comando**
-
-| REPITA n VEZES comandos 
-FIM REPITA
-
-
-**Argumentos**
-
-n é o número de vezes que os comandos serão repetidos.
+Comando
+    | ``REPITA`` n ``VEZES`` comandos 
+    ``FIM REPITA``
 
 
-**Explicação**
+Argumentos
+    n é o número de vezes que os comandos serão repetidos.
 
-Repete os comandos n vezes.
+
+Explicação
+    Repete os comandos n vezes.
 
 
-**Exemplo**
+Exemplo
 
-| REPITA 4 VEZES 
-| GD 90 
-| PF 2 
-FIM REPITA
+    ::
 
-Supondo que o robô comece na posição 0,0. Os comandos PF 3  GD 90 serão repetidos 4 vezes. Ao final, o robô terá feito um trajeto similar a um quadrado e finalizará na posição 0,0 virado para o norte.
+        REPITA 4 VEZES 
+        GD 90 
+        PF 2 
+        FIM REPITA
+
+    Supondo que o robô comece na posição 0,0. Os comandos PF 3  GD 90 serão repetidos 4 vezes. Ao final, o robô terá feito um trajeto similar a um quadrado e finalizará na posição 0,0 virado para o norte.
 
 
 **3.**
-**Comando**
-
-| ENQUANTO
-| expressão operador lógico expressão
-| FAÇA
-| comandos
-FIM ENQUANTO 
+Comando
+    | ``ENQUANTO`` expressão operador lógico expressão
+    | ``FAÇA`` comandos
+    ``FIM ENQUANTO`` 
 
 
-**Argumentos**
-
-variável ou Expressão operador lógico variável ou expressão:
-variável ou expressão - operador lógico - variável ou expressão
-
-
-**Explicação**
-
-Repete os comandos enquanto  a Expressão-operador lógico-expressão for verdadeira. 
+Argumentos
+    variável ou Expressão operador lógico variável ou expressão:
+    variável ou expressão - operador lógico - variável ou expressão
 
 
-**Exemplo**
+Explicação
+    Repete os comandos enquanto  a Expressão-operador lógico-expressão for verdadeira. 
 
-O exemplo faz com que o robô precise andar em direção a um obstáculo que está a sua frente e a cada passo fale “estou chegando”. 
 
-| ENQUANTO DISTÂNCIA F >3
-| FAÇA  
-| PF 1
-| FALAR “estou chegando”
-FIM ENQUANTO
+Exemplo
+    O exemplo faz com que o robô precise andar em direção a um obstáculo que está a sua frente e a cada passo fale “estou chegando”. 
 
-Enquanto a distância da frente do robô em relação ao objeto for maior que 3, o robô andará um passo para frente e falará “estou chegando”
+    ::
+
+        ENQUANTO DISTÂNCIA F >3
+        FAÇA  
+        PF 1
+        FALAR “estou chegando”
+        FIM ENQUANTO
+
+    Enquanto a distância da frente do robô em relação ao objeto for maior que 3, o robô andará um passo para frente e falará “estou chegando”
 
 
 
@@ -988,50 +980,53 @@ Seção 11: declaração de procedimentos
 Procedimento é um programa menor (subprograma) que permite decompor e resolver um problema mais complexo em um mais simples. Pode ser chamado em outras partes do programa.
 
 
-**Comando**
-
-| APRENDER nome: variável1, variável2, variável3, …
-| FAÇA comandos
-FIM APRENDER
-
-
-**Argumentos**
-
-nome é o nome do subprograma e variavel1, variavel2, variavel3  são os argumentos da mesma
+Comando
+    | ``APRENDER`` nome: variável1, variável2, variável3, …
+    | ``FAÇA`` comandos
+    ``FIM APRENDER``
 
 
-**Explicação**
-
-| Serve para criar um subprograma. 
-Este comando somente funciona via arquivo.
+Argumentos
+    nome é o nome do subprograma e variavel1, variavel2, variavel3  são os argumentos da mesma
 
 
-**Exemplo**
+Explicação
+    | Serve para criar um subprograma. 
+    Este comando somente funciona via arquivo.
 
-O robô precisa caminhar simulando um retângulo. Esse retângulo pode ter tamanhos diferentes, conforme a atividade. Por isso, pode ser utilizado o comando APRENDER para criar um procedimento único chamado RETÂNGULO que receberia duas variáveis, uma para o tamanho da altura e a outra para o tamanho da base. Assim, esse procedimento poderia ser utilizado para fazer retângulos de tamanhos diferentes.
 
-| APRENDER RETÂNGULO: base, altura
-| FAÇA
-| PF base GD 90 
-| PF altura GD 90
-| PF base GD 90
-| PF altura GD 90 
-FIM APRENDER
+Exemplo
+    O robô precisa caminhar simulando um retângulo. Esse retângulo pode ter tamanhos diferentes, conforme a atividade. Por isso, pode ser utilizado o comando APRENDER para criar um procedimento único chamado RETÂNGULO que receberia duas variáveis, uma para o tamanho da altura e a outra para o tamanho da base. Assim, esse procedimento poderia ser utilizado para fazer retângulos de tamanhos diferentes.
 
-Ou
+    ::
 
-| APRENDER RETÂNGULO: base, altura
-| FAÇA
-| REPITA 2 VEZES
-| PF base GD 90 
-| PF altura GD 90
-| FIM REPITA
-FIM APRENDER
+        APRENDER RETÂNGULO: base, altura
+        FAÇA
+        PF base GD 90 
+        PF altura GD 90
+        PF base GD 90
+        PF altura GD 90 
+        FIM APRENDER
 
-| chamada do subprograma
-| RETÂNGULO [5,3]
-| RETÂNGULO [8,4]
-RETÂNGULO [9,5]
+    Ou
+
+    ::
+
+        APRENDER RETÂNGULO: base, altura
+        FAÇA
+        REPITA 2 VEZES
+        PF base GD 90 
+        PF altura GD 90
+        FIM REPITA
+        FIM APRENDER
+
+    chamada do subprograma
+
+    ::
+
+        RETÂNGULO [5,3]
+        RETÂNGULO [8,4]
+        RETÂNGULO [9,5]
 
 
 
@@ -1039,48 +1034,47 @@ Seção 12: comandos variados
 ##############################
 
 **1.**
-**Comando**
-
-ESPERAR t
-
-
-**Argumentos**
-
-t é o tempo em segundos
+Comando
+    ESPERAR t
 
 
-**Explicação**
+Argumentos
+    t é o tempo em segundos
 
-Espera t segundos para executar o próximo comando.
+
+Explicação
+    Espera t segundos para executar o próximo comando.
 
 
-**Exemplo**
+Exemplo
+    Se o robô deve andar para frente 2 passos, esperar 3 segundos e andar mais 4 passos:
 
-| Se o robô deve andar para frente 2 passos, esperar 3 segundos e andar mais 4 passos:
-| PF 2 
-| ESPERAR 3
-PF 4
+    ::
+
+        PF 2 
+        ESPERAR 3
+        PF 4
 
 
 **2.**
-**Comando**
-
---
-
-
-**Argumentos**
-
-nenhum
+Comando
+    ``--``
 
 
-**Explicação**
+Argumentos
+    nenhum
 
-Após esse símbolo -- tudo que for escrito na linha que possui -- não será executado. São lembretes sobre o código.
+
+Explicação
+    Após esse símbolo -- tudo que for escrito na linha que possui -- não será executado. São lembretes sobre o código.
 
 
-**Exemplo**
+Exemplo
 
--- Isto é um comentário.
+    ::
+
+        -- Isto é um comentário.
+
 
 manual da linguagem e eexemplos de uso.
 colocar os exercicios como se fossem subsecoes.
