@@ -47,26 +47,18 @@ Manual da Linguagem Donnie
 Seção 1: sair do terminal de programação
 #########################################
 
-**Comando**
+Comando
+    ``SAIR``
 
-``SAIR``
-
-
-**Argumentos**
-
-::
-
-Nenhum
+Argumentos
+    Nenhum
 
 
-**Explicação**
-
-::
-
-Fecha o ambiente de programação. Só pode ser usado no terminal.
+Explicação
+    Fecha o ambiente de programação. Só pode ser usado no terminal.
 
 
-**Exemplo**
+Exemplo
 
 ::
 
@@ -78,41 +70,32 @@ Seção 2: declaração de variáveis
 #################################
 **Variável** é um objeto que guarda um valor. Essa variável só poderá receber valores inteiros.
 
-**Comando**
+Comando
+    ``CRIAR x``
 
-``CRIAR x``
+Argumentos
+    x é a variável que será criada. Essa variável recebe valores inteiros.
 
+Explicação
+    Existem 5 formas de criar uma variável:
+    1. criar uma variável.
+    2. criar uma variável e atribui um valor inicial.
+    3. criar uma variável que recebe uma expressão.
+    4. criar uma variável dentro do comando de repetição PARA.
+    5. criar uma variável que receberá o valor de outro comando, como: COR, DISTÂNCIA e POS.
 
-**Argumentos**
+    As variáveis guardam somente os últimos valores recebidos.
+    As variáveis guardam somente valores inteiros. Desta forma, se houver um resultado com vírgula, esse será descartado e somente a parte inteira será armazenada na variável.
 
-::
-
-x é a variável que será criada. Essa variável recebe valores inteiros.
-
-
-**Explicação**
-
-::
-
-| Existem 5 formas de criar uma variável:
-| 1. criar uma variável.
-| 2. criar uma variável e atribui um valor inicial.
-| 3. criar uma variável que recebe uma expressão.
-| 4. criar uma variável dentro do comando de repetição PARA.
-| 5. criar uma variável que receberá o valor de outro comando, como: COR, DISTÂNCIA e POS.
-
-| As variáveis guardam somente os últimos valores recebidos.
- As variáveis guardam somente valores inteiros. Desta forma, se houver um resultado com vírgula, esse será descartado e somente a parte inteira será armazenada na variável.
-
-| Existem regras para o nome das variáveis:
-| - Não há diferença entre letras maiúsculas e minúsculas. Desta forma, CRIAR A (maiúsculo) será o mesmo que CRIAR a (minúsculo).
-| - Não podem ter caracteres especiais. Exemplo: *, @, #, +
-| - Não podem iniciar com número. Exemplo: CRIAR 52abc está errado.
+    Existem regras para o nome das variáveis:
+    - Não há diferença entre letras maiúsculas e minúsculas. Desta forma, CRIAR A (maiúsculo) será o mesmo que CRIAR a (minúsculo).
+    - Não podem ter caracteres especiais. Exemplo: *, @, #, +
+    - Não podem iniciar com número. Exemplo: CRIAR 52abc está errado.
 
 
 **Exemplo**
 
-::
+
 
 1. Para criar uma variável sem valor inicial, pode-se fazer: 
 
@@ -165,21 +148,27 @@ Comandos para manipulação e retorno de áudio.
 **1.**
 **Comando**
 
-FALAR x
+``FALAR x``
 
 
 **Argumentos**
+
+
 
 x é uma variável, que deve ter sido criada anteriormente.
 
 
 **Explicação**
 
+
+
 | Fala o conteúdo da variável.
  Este som é emitido pelo robô ou pelo ambiente virtual, dependendo de quem estará ativo.
 
 
 **Exemplo**
+
+
 
 | CRIAR x = 5
 | FALAR x
@@ -189,10 +178,12 @@ x é uma variável, que deve ter sido criada anteriormente.
 **2.**
 **Comando**
 
-FALAR "x"
+``FALAR "x"``
 
 
 **Argumentos**
+
+
 
 x é uma palavra ou frase, que deve vir entre aspas duplas.
 
