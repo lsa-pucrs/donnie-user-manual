@@ -74,7 +74,7 @@ Comando
     ``CRIAR x``
 
 Argumentos
-    *x* é a variável que será criada. Essa variável recebe valores inteiros.
+    ``x`` é a variável que será criada. Essa variável recebe valores inteiros.
 
 Explicação
     Existem 5 formas de criar uma variável:
@@ -101,43 +101,43 @@ Explicação
 
     ::
 
-        CRIAR `A`
+        CRIAR A
 
-    Cria uma variável com o nome A.
+    Cria uma variável com o nome ``A``.
 
     ::
 
-        `A` = 2
+        A = 2
 
-    Tendo sido criada a variável, pode atribuir um valor diretamente. A variável com o nome `A` vai armazenar o valor 2.
+    Tendo sido criada a variável, pode atribuir um valor diretamente. A variável com o nome ``A`` vai armazenar o valor 2.
 
 2. Para criar uma variável com valor inicial, pode-se fazer como a seguir: 
 
     ::
 
-        CRIAR *B* =5
+        CRIAR B =5
 
-    Cria uma variável chamada *B*, que armazena o valor 5
+    Cria uma variável chamada ``B``, que armazena o valor 5
 
 3. Para criar uma variável que recebe uma expressão, pode-se fazer como a seguir: 
 
     ::
 
-        CRIAR *C* = *A* + *B*
+        CRIAR C = A + B
 
-    Cria uma variável chamada *C*, que recebe o valor da variável A somado ao valor da variável chamada *B*. O resultado da variável *C* é 7.
-
-    ::
-
-        *C* = 1
-
-    Altera o valor da variável *C* e armazena o valor 1, perdendo o valor anterior.
-
-4.  Para criar uma variável dentro de um comando PARA (esse comando será visto na seção X do manual), pode ser feito da seguinte forma:
+    Cria uma variável chamada ``C``, que recebe o valor da variável ``A`` somado ao valor da variável chamada ``B``. O resultado da variável ``C`` é 7.
 
     ::
 
-        PARA CRIAR *d* = 0;  *d < 5*; *d = d + 1* FAÇA 
+        C = 1
+
+    Altera o valor da variável ``C`` e armazena o valor 1, perdendo o valor anterior.
+
+4.  Para criar uma variável dentro de um comando ``PARA`` (esse comando será visto na seção 10 do manual), pode ser feito da seguinte forma:
+
+    ::
+
+        PARA CRIAR d = 0;  d < 5; d = d + 1 FAÇA 
         PF 1
         FIM PARA 
 
@@ -147,20 +147,20 @@ Explicação
 
     ::
 
-        CRIAR *d* = DISTÂNCIA F
-        CRIAR *c* = COR VERDE
-        CRIAR *px* = POS X
+        CRIAR d = DISTÂNCIA F
+        CRIAR c = COR VERDE
+        CRIAR px = POS X
 
-    - A variável *d* armazenará o valor da distância frontal do robô em relação ao objeto.
-    - A variável *c* armazenará a quantidade de cores verdes.
-    - A variável *px* armazenará a posição atual do robô no eixo x. 
+    - A variável ``d`` armazenará o valor da distância frontal do robô em relação ao objeto.
+    - A variável ``c`` armazenará a quantidade de cores verdes.
+    - A variável ``px`` armazenará a posição atual do robô no eixo x. 
     - (Os comandos Distância F, Cor e Pos x serão vistos na seção x)
 
     ::
 
-        *G* = 5
+        G = 5
 
-    Retornará erro porque a variável *G* ainda não foi criada.
+    Retornará erro porque a variável ``G`` ainda não foi criada.
 
 
 
@@ -170,11 +170,11 @@ Comandos para manipulação e retorno de áudio.
 
 | **a)**
 Comando
-    ``FALAR *x*``
+    ``FALAR x``
 
 
 Argumentos
-    *x* é uma variável, que deve ter sido criada anteriormente.
+    ``x`` é uma variável, que deve ter sido criada anteriormente.
 
 
 Explicação
@@ -186,19 +186,19 @@ Explicação
 
     ::
 
-        CRIAR *x* = 5
-        FALAR *x*
+        CRIAR x = 5
+        FALAR x
 
     Será falado: 5
 
 
 | **b)**
 Comando
-    ``FALAR "*x*"``
+    ``FALAR "x"``
 
 
 Argumentos
-    *x* é uma palavra ou frase, que deve vir entre aspas duplas.
+    ``x`` é uma palavra ou frase, que deve vir entre aspas duplas.
 
 
 Explicação
@@ -209,9 +209,9 @@ Explicação
         
     ::
 
-        FALAR “*oi*”
+        FALAR “oi”
 
-    Será falado: *oi*
+    Será falado: ``"oi"``
 
 
 | **c)**
@@ -250,7 +250,7 @@ Argumentos
     | ``+ soma``
     | ``- subtração``
     | ``* multiplicação``
-    ``/ divisão``
+    | ``/ divisão``
 
     | *Comparadores:* 
     | ``<> diferente``
@@ -261,7 +261,7 @@ Argumentos
     | ``>= maior ou igual``
 
     | *atribuição:*
-    ``= atribuição``
+    | ``= atribuição``
 
 
 Explicação
@@ -273,63 +273,63 @@ Exemplo
 
     ::
 
-        Criar *a* = 2
+        Criar a = 2
 
-    criando a variável *a* e atribuindo o valor de 2.
-
-    ::
-
-        Criar *b* = 1
-
-    Criando a variável *b* e atribuindo o valor de 1.
+    criando a variável ``a`` e atribuindo o valor de 2.
 
     ::
 
-        Criar *soma*
+        Criar b = 1
 
-    Criando a variável *soma*
-
-    ::
-
-        *soma* = *a* + *b* 
-
-    atribuindo a soma o valor da *soma* da variável *a* e *b*.
+    Criando a variável ``b`` e atribuindo o valor de 1.
 
     ::
 
-        Falar *soma*
+        Criar soma
+
+    Criando a variável ``soma``
+
+    ::
+
+        *soma* = a + b 
+
+    atribuindo a ``soma`` o valor da *soma* da variável ``a`` e ``b``.
+
+    ::
+
+        Falar soma
 
     Será falado: 3
 
-    `Para realizar uma divisão:` 
+    *Para realizar uma divisão:* 
 
     ::
 
-        Criar *c* = 2
+        Criar c = 2
 
-    criando a variável *c* e atribuindo o valor de 2.
-
-    ::
-
-        Criar *d* = 2
-
-    Criando a variável *d* e atribuindo o valor de 2.
+    criando a variável ``c`` e atribuindo o valor de 2.
 
     ::
 
-        Criar *divisão*
+        Criar d = 2
 
-    Criando a variável *divisão*
-
-    ::
-
-        *divisão* = *c* / *d* 
-
-    Atribuindo o valor da *divisão* dos conteúdos das variáveis *c* e *d*.
+    Criando a variável ``d`` e atribuindo o valor de 2.
 
     ::
 
-        Falar *divisão*
+        Criar divisão
+
+    Criando a variável divisão
+
+    ::
+
+        divisão = c / d 
+
+    Atribuindo o valor da divisão dos conteúdos das variáveis ``c`` e ``d``.
+
+    ::
+
+        Falar divisão
 
     Será falado: 1
 
@@ -341,16 +341,16 @@ São comandos que movimentam o robô no ambiente.
 
 | **a)**
 Comando
-    ``PF *n*``
+    ``PF n``
 
 
 Argumentos
-    *n* é o número de passos. 
+    ``n`` é o número de passos. 
     Este comando aceita somente números inteiros e positivos, ou variáveis que armazenam números inteiros, ou expressões matemáticas que resultem em números inteiros.
 
 
 Explicação
-    Anda *n* passos para frente.
+    Anda ``n`` passos para frente.
 
 
 **Exemplo**
@@ -363,20 +363,20 @@ Explicação
 
     ::
 
-        CRIAR *A* = 10
-        PF *A*
+        CRIAR A = 10
+        PF A
 
     Fará com que o robô ande 10 passos para frente.
 
     ::
 
-        CRIAR *A* = 10
-        CRIAR *B* = 20
-        PF *A* + *B*
+        CRIAR A = 10
+        CRIAR B = 20
+        PF A + B
 
     Fará com que o robô ande 30 passos para frente.
 
-    Se o robô colidir em algo antes de completar a quantidade de passos solicitados. Será informado ao usuário:  ``“Andei somente *X* passos para frente. Encontrei obstáculo”``. 
+    Se o robô colidir em algo antes de completar a quantidade de passos solicitados. Será informado ao usuário:  ``“Andei somente X passos para frente. Encontrei obstáculo”``. 
 
     Se for digitado o comando com um número negativo como abaixo:
 
@@ -389,16 +389,16 @@ Explicação
 
 | **b)**
 Comando
-    ``PT *n*``
+    ``PT n``
 
 
 Argumentos
-    *n* é o número de passos.
+    ``n`` é o número de passos.
     Este comando aceita somente números inteiros e positivos, ou variáveis que armazenam números inteiros, ou expressões matemáticas que resultem em números inteiros.
 
 
 Explicação
-    Anda *n* passos para trás. É como se andasse de ré. 
+    Anda ``n`` passos para trás. É como se andasse de ré. 
 
 
 **Exemplo**
@@ -411,20 +411,20 @@ Explicação
 
     ::
 
-        CRIAR *A* = 10
-        PT *A*
+        CRIAR A = 10
+        PT A
 
     Fará com que o robô ande 10 passos para trás.
 
     ::
 
-        CRIAR *A* = 10
-        CRIAR *B* = 20
-        PT *A* + *B*
+        CRIAR A = 10
+        CRIAR B = 20
+        PT A + B
 
     Fará com que o robô ande 30 passos para trás.
 
-    Se o robô colidir em algo antes de completar a quantidade de passos solicitados. Será informado ao usuário:  “Andei somente *X* passos para trás. Encontrei obstáculo”. 
+    Se o robô colidir em algo antes de completar a quantidade de passos solicitados. Será informado ao usuário:  ``“Andei somente X passos para trás. Encontrei obstáculo”``. 
 
     Caso seja digitado o comando com número negativo como abaixo: 
 
@@ -432,7 +432,7 @@ Explicação
 
         PT -6
 
-    Será informado, andei 0 passos. 
+    Será informado, ``"andei 0 passos"``. 
 
 
 Seção 6: comandos de Rotação
@@ -441,16 +441,16 @@ Rotação sem movimento do robô
 
 | **a)**
 Comando
-    ``GD *n*``
+    ``GD n``
 
 
 Argumentos
-    *n* é número de graus.
+    ``n`` é número de graus.
     Este comando aceita somente números inteiros positivos e negativos,  ou variáveis que armazenam números inteiros, ou expressões matemáticas que resultem em números inteiros.
 
 
 Explicação
-    Gira *n* graus para direita. Não há deslocamento do robô.
+    Gira ``n`` graus para direita. Não há deslocamento do robô.
 
 
 **Exemplo**
@@ -463,16 +463,16 @@ Explicação
 
     ::
 
-        CRIAR *A* = 45
-        GD *A*
+        CRIAR A = 45
+        GD A
 
     Fará com que o robô gire 45 graus para a direita.
 
     ::
 
-        CRIAR *A* = 80
-        CRIAR *B* = 10
-        GD *A* + *B*
+        CRIAR A = 80
+        CRIAR B = 10
+        GD A + B
 
     Fará com que o robô gire 90 graus para a direita.
 
@@ -485,17 +485,17 @@ Explicação
 
 | **b)**
 Comando
-    ``GE *n*``
+    ``GE n``
 
 
 Argumentos
-    *n* é número de graus.
+    ``n`` é número de graus.
     Este comando aceita somente números inteiros positivos e negativos,  ou variáveis que armazenam números inteiros, ou expressões matemáticas que resultem em números inteiros.
 
 
 
 Explicação
-    Gira *n* graus para esquerda. Não há deslocamento do robô.
+    Gira ``n`` graus para esquerda. Não há deslocamento do robô.
 
 
 **Exemplo**
@@ -508,16 +508,16 @@ Explicação
 
     ::
 
-        CRIAR *A* = 45
-        GE *A*
+        CRIAR A = 45
+        GE A
 
     Fará com que o robô gire 45 graus para a esquerda.
 
     ::
 
-        CRIAR *A* = 80
-        CRIAR *B* = 10
-        GE *A* + *B*
+        CRIAR A = 80
+        CRIAR B = 10
+        GE A + B
 
     Fará com que o robô gire 90 graus para a esquerda.
 
@@ -580,7 +580,7 @@ Explicação
 
         PF 3 ESTADO
 
-    Supondo que o robô estava em 0,0. O robô andará 3 passos para frente e informará “Comando 1 foi PF 3, andou 3, não bateu, posição [3,0,0]. O 3 corresponde ao eixo x, o primeiro 0 ao eixo y e o último 0 ao ângulo do robô. 
+    Supondo que o robô estava em 0,0. O robô andará 3 passos para frente e informará ``“Comando 1 foi PF 3, andou 3, não bateu, posição [3,0,0]"``. O 3 corresponde ao eixo x, o primeiro 0 ao eixo y e o último 0 ao ângulo do robô. 
     
     Caso o robô tenha colidido em algo completando apenas 2 passos com sucesso, o ESTADO retornará: 
     ``“Comando 1 foi PF 3, andou 2, bateu, posição [2,0,0]”``. O 2 corresponde ao eixo x, o primeiro 0 ao eixo y e o último 0 ao ângulo do robô.
@@ -596,11 +596,11 @@ São comandos para obter informações sobre o ambiente em que o robô está. É
 
 | **a)**
 Comando
-    ``DISTÂNCIA *d*``
+    ``DISTÂNCIA d``
 
 
 Argumentos
-    *d* é a direção do sensor do robô (*f* - frontal; *fd* - frontal direita; *fe* -frontal esquerda;  *td* - traseiro direito; *t* - traseiro; *te* - traseiro esquerda)
+    ``d`` é a direção do sensor do robô (``f`` - frontal; ``fd`` - frontal direita; ``fe`` -frontal esquerda;  ``td`` - traseiro direito; ``t`` - traseiro; ``te`` - traseiro esquerda)
 
 
 Explicação
@@ -647,9 +647,9 @@ Explicação
 
     ::
 
-        CRIAR  *d* =  DISTÂNCIA T
+        CRIAR  d =  DISTÂNCIA T
 
-    Armazena na variável d a distância traseira do robô até o obstáculo que está diretamente atrás dele. Supondo que o Robô está na posição 0,3 virado para o norte e existe um obstáculo em 0,0. O valor armazenado em d será 3.
+    Armazena na variável ``d`` a distância traseira do robô até o obstáculo que está diretamente atrás dele. Supondo que o Robô está na posição 0,3 virado para o norte e existe um obstáculo em 0,0. O valor armazenado em d será 3.
 
     3. 
 
@@ -661,7 +661,7 @@ Explicação
         FALAR “não é possível andar para frente”
         FIM SE
 
-    No exemplo acima, se a distância frontal do robô for maior que 3, o robô andará 1 passo para frente. Se for igual ou menor a 3, irá falar “não é possível andar para frente”.
+    No exemplo acima, se a distância frontal do robô for maior que 3, o robô andará 1 passo para frente. Se for igual ou menor a 3, irá falar ``“não é possível andar para frente”``.
 
     ::
 
@@ -675,11 +675,11 @@ Explicação
 
 | **b)**
 Comando
-    ``POS *k*``
+    ``POS k``
 
 
 Argumentos
-    *k* é um eixo do plano cartesiano (X ou Y) ou ângulo (A).
+    ``k`` é um eixo do plano cartesiano (X ou Y) ou ângulo (A).
 
 
 Explicação
@@ -721,27 +721,27 @@ Explicação
 
     ::
 
-        CRIAR *z* = POS x 
+        CRIAR z = POS x 
 
-    A variável z possui a posição do robô no eixo x.
-
-    ::
-
-        CRIAR *b* = POS y 
-
-    A variável b contém a posição do robô no eixo y. 
+    A variável ``z`` possui a posição do robô no eixo x.
 
     ::
 
-        CRIAR *i* = POS a
+        CRIAR b = POS y 
 
-    A variável i contém o ângulo do robô.  
+    A variável ``b`` contém a posição do robô no eixo y. 
+
+    ::
+
+        CRIAR i = POS a
+
+    A variável ``i`` contém o ângulo do robô.  
 
     3. Se deseja utilizar diretamente dentro de outros comandos, pode-se fazer como a seguir:
 
     ::
 
-        SE POS *b* > 0 ENTÃO 
+        SE POS b > 0 ENTÃO 
         PF 5
         SENÃO 
         PT 5
@@ -750,11 +750,11 @@ Explicação
 
 | **c)**
 Comando
-    ``COR *c*``
+    ``COR c``
 
 
 Argumentos
-    *c* é a cor desejada (azul; vermelho; verde)
+    ``c`` é a cor desejada (azul; vermelho; verde)
 
 
 Explicação
@@ -774,7 +774,7 @@ Explicação
 
     ::
 
-    FALAR COR azul
+        FALAR COR azul
 
     será falado 2
 
@@ -788,15 +788,15 @@ Explicação
 
     ::
 
-        CRIAR *A* = COR AZUL
+        CRIAR A = COR AZUL
 
-    A variável *A* possui a quantidade de objetos azuis 
+    A variável ``A`` possui a quantidade de objetos azuis 
 
     ::
 
-        CRIAR *V* = COR VERDE
+        CRIAR V = COR VERDE
 
-    A variável *V* contém a quantidade de objetos verdes.
+    A variável ``V`` contém a quantidade de objetos verdes.
 
     3. Se deseja utilizar diretamente dentro de outros comandos, pode-se fazer como a seguir:
 
@@ -839,12 +839,12 @@ Explicação
 
 
 Exemplo
-    Supondo que, se a variável a for menor do que 4 o robô tenha que andar para frente 5 passos e caso contrário tenha que girar 45 graus para esquerda:
+    Supondo que, se a variável ``a`` for menor do que 4 o robô tenha que andar para frente 5 passos e caso contrário tenha que girar 45 graus para esquerda:
 
     ::
 
-        CRIAR *a* = 0
-        SE *a* < 4 
+        CRIAR a = 0
+        SE a < 4 
         ENTÃO PF 5 
         SENÃO GE 45
         FIM SE
@@ -870,12 +870,12 @@ Exemplo
 
     ::
 
-        CRIAR *a* = 0
-        SE *a* < 4
+        CRIAR a = 0
+        SE a < 4
         ENTÃO PF 5
         FIM SE
 
-    Se a variável *a* tiver um valor menor do que 4 então o robô andará 5 passos para frente.
+    Se a variável ``a`` tiver um valor menor do que 4 então o robô andará 5 passos para frente.
 
 
 
@@ -906,32 +906,32 @@ Explicação
 
 
 Exemplo
-    O exemplo faz com que o robô precise andar em direção a um obstáculo que está a sua frente e a cada passo fale “*oi*”. 
+    O exemplo faz com que o robô precise andar em direção a um obstáculo que está a sua frente e a cada passo fale “oi”. 
 
     ::    
 
-        CRIAR *obstaculo* = DISTÂNCIA F
-        PARA CRIAR *x = 1*; *x* <= *obstaculo*; *x = x + 1*
+        CRIAR obstaculo = DISTÂNCIA F
+        PARA CRIAR x = 1; x <= obstaculo; x = x + 1
         FAÇA  
         PF 1
-        FALAR “*oi*”
+        FALAR “oi”
         FIM PARA
 
-    A variável *x* começará com o valor 1 e o robô andará um passo para frente e falará “*oi*”, enquanto seu valor for menor ou igual a linha do obstáculo que está à sua frente. 
+    A variável ``x`` começará com o valor 1 e o robô andará um passo para frente e falará ``“oi”``, enquanto seu valor for menor ou igual a linha do obstáculo que está à sua frente. 
 
 
 | **b)**
 Comando
-    | ``REPITA *n* VEZES`` comandos 
+    | ``REPITA n VEZES`` comandos 
     ``FIM REPITA``
 
 
 Argumentos
-    *n* é o número de vezes que os comandos serão repetidos.
+    ``n`` é o número de vezes que os comandos serão repetidos.
 
 
 Explicação
-    Repete os comandos *n* vezes.
+    Repete os comandos ``n`` vezes.
 
 
 **Exemplo**
@@ -963,17 +963,17 @@ Explicação
 
 
 Exemplo
-    O exemplo faz com que o robô precise andar em direção a um obstáculo que está a sua frente e a cada passo fale “*estou chegando*”. 
+    O exemplo faz com que o robô precise andar em direção a um obstáculo que está a sua frente e a cada passo fale “estou chegando”. 
 
     ::
 
         ENQUANTO DISTÂNCIA F >3
         FAÇA  
         PF 1
-        FALAR “*estou chegando*”
+        FALAR “estou chegando”
         FIM ENQUANTO
 
-    Enquanto a distância da frente do robô em relação ao objeto for maior que 3, o robô andará um passo para frente e falará “*estou chegando*”
+    Enquanto a distância da frente do robô em relação ao objeto for maior que 3, o robô andará um passo para frente e falará ``“estou chegando”``
 
 
 
@@ -1037,15 +1037,15 @@ Seção 12: comandos variados
 
 | **a)**
 Comando
-    ``ESPERAR *t*``
+    ``ESPERAR t``
 
 
 Argumentos
-    *t* é o tempo em segundos
+    ``t`` é o tempo em segundos
 
 
 Explicação
-    Espera *t* segundos para executar o próximo comando.
+    Espera ``t`` segundos para executar o próximo comando.
 
 
 Exemplo
@@ -1068,7 +1068,7 @@ Argumentos
 
 
 Explicação
-    Após esse símbolo -- tudo que for escrito na linha que possui -- não será executado. São lembretes sobre o código.
+    Após esse símbolo ``--`` tudo que for escrito na linha que possui ``--`` não será executado. São lembretes sobre o código.
 
 
 **Exemplo**
