@@ -49,20 +49,26 @@ Seção 1: sair do terminal de programação
 
 **Comando**
 
-SAIR
+``SAIR``
 
 
 **Argumentos**
+
+::
 
 Nenhum
 
 
 **Explicação**
 
+::
+
 Fecha o ambiente de programação. Só pode ser usado no terminal.
 
 
 **Exemplo**
+
+::
 
 SAIR
 
@@ -74,15 +80,19 @@ Seção 2: declaração de variáveis
 
 **Comando**
 
-CRIAR x
+``CRIAR x``
 
 
 **Argumentos**
+
+::
 
 x é a variável que será criada. Essa variável recebe valores inteiros.
 
 
 **Explicação**
+
+::
 
 | Existem 5 formas de criar uma variável:
 | 1. criar uma variável.
@@ -101,6 +111,8 @@ x é a variável que será criada. Essa variável recebe valores inteiros.
 
 
 **Exemplo**
+
+::
 
 1. Para criar uma variável sem valor inicial, pode-se fazer: 
 
