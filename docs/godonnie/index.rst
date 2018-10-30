@@ -12,11 +12,11 @@ por um cenário. Este robô funciona em um ambiente próprio. Para tal, estando 
 terminal Linux, é necessário digitar ``donnie_player`` e pressionar a tecla ``ENTER``.
 
 Para comando o robô, o usuário pode utilizar o modo linha de comando ou arquivo. Para
-utilizar, o modo de linha de comando, deve ser digitado godonnie -t. Para entrar no
+utilizar, o modo de linha de comando, deve ser digitado ``godonnie -t``. Para entrar no
 modo arquivo, deve ser digitado ``godonnie -f``. Essas expressões podem ser digitadas em
 minúsculo ou maiúsculo.
 
-No modo de linha de comando, após ter sido digitado godonnie -t, o usuário digita os
+No modo de linha de comando, após ter sido digitado ``godonnie -t``, o usuário digita os
 comandos desejados. Pode ser digitado um comando por linha ou vários comandos em
 uma mesma linha. Após cada linha, o usuário deve pressionar a tecla ``ENTER``. Para que o
 robô execute os comandos, é preciso pressionar a tecla ``ESC``. Desta forma, o usuário
@@ -82,7 +82,7 @@ Explicação
     1. criar uma variável.
     2. criar uma variável e atribui um valor inicial.
     3. criar uma variável que recebe uma expressão.
-    4. criar uma variável dentro do comando de repetição ``PARA`.
+    4. criar uma variável dentro do comando de repetição ``PARA``.
     5. criar uma variável que receberá o valor de outro comando, como: ``COR``, ``DISTÂNCIA`` e ``POS``.
 
     As variáveis guardam somente os últimos valores recebidos.
@@ -90,7 +90,7 @@ Explicação
 
     Existem regras para o nome das variáveis:
 
--   Não há diferença entre letras maiúsculas e minúsculas. Desta forma, CRIAR A (maiúsculo) será o mesmo que CRIAR a (minúsculo).
+-   Não há diferença entre letras maiúsculas e minúsculas. Desta forma, ``CRIAR A`` (maiúsculo) será o mesmo que ``CRIAR a`` (minúsculo).
 -   Não podem ter caracteres especiais. Exemplo: *, @, #, +
 -   Não podem iniciar com número. Exemplo: CRIAR 52abc está errado.
 
@@ -101,15 +101,15 @@ Explicação
 
     ::
 
-        CRIAR *A*
+        CRIAR `A`
 
-    Cria uma variável com o nome *A*.
+    Cria uma variável com o nome A.
 
     ::
 
-        *A* = 2
+        `A` = 2
 
-    Tendo sido criada a variável, pode atribuir um valor diretamente. A variável com o nome *A* vai armazenar o valor 2.
+    Tendo sido criada a variável, pode atribuir um valor diretamente. A variável com o nome `A` vai armazenar o valor 2.
 
 2. Para criar uma variável com valor inicial, pode-se fazer como a seguir: 
 
