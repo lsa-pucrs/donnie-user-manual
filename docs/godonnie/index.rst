@@ -71,7 +71,7 @@ Seção 2: declaração de variáveis
 **Variável** é um objeto que guarda um valor. Essa variável só poderá receber valores inteiros.
 
 Comando
-    ``CRIAR`` x
+    ``CRIAR x``
 
 Argumentos
     x é a variável que será criada. Essa variável recebe valores inteiros.
@@ -168,9 +168,9 @@ Seção 3: comandos de áudio
 ###########################
 Comandos para manipulação e retorno de áudio.
 
-**1.**
+| **a)**
 Comando
-    ``FALAR`` x
+    ``FALAR x``
 
 
 Argumentos
@@ -192,12 +192,13 @@ Exemplo
     Será falado: 5
 
 
-**2.**
+| **b)**
 Comando
-    ``FALAR`` "x"
+    ``FALAR "x"``
 
 
 Argumentos
+  manual da linguagem e eexemplos de us
     x é uma palavra ou frase, que deve vir entre aspas duplas.
 
 
@@ -214,7 +215,7 @@ Exemplo
     Será falado: oi
 
 
-**3.**
+| **c)**
 Comando
     ``SOM ligado``
     ``SOM desligado``
@@ -250,7 +251,7 @@ Argumentos
     | ``+ soma``
     | ``- subtração``
     | ``* multiplicação``
-    ``/ divisão``
+    |``/ divisão``
 
     | `Comparadores:` 
     | ``<> diferente``
@@ -261,7 +262,7 @@ Argumentos
     | ``>= maior ou igual``
 
     | `atribuição:`
-    ``= atribuição``
+    |``= atribuição``
 
 
 Explicação
@@ -339,9 +340,9 @@ Seção 5: comandos de movimentação
 ##################################
 São comandos que movimentam o robô no ambiente.
 
-**1.**
+| **a)**
 Comando
-    ``PF`` n 
+    ``PF n``
 
 
 Argumentos
@@ -387,9 +388,9 @@ Exemplo
     Será informado ao usuário que o robô andou 0 passos. 
 
 
-**2.**
+| **b)**
 Comando
-    ``PT`` n
+    ``PT n``
 
 
 Argumentos
@@ -438,9 +439,9 @@ Seção 6: comandos de Rotação
 #############################
 Rotação sem movimento do robô
 
-**1.**
+| **a)**
 Comando
-    ``GD`` n
+    ``GD n``
 
 
 Argumentos
@@ -482,9 +483,9 @@ Exemplo
     O robô gira para o lado esquerdo 90 graus. 
 
 
-**2.**
+| **b)**
 Comando
-    ``GE`` n
+    ``GE n``
 
 
 Argumentos
@@ -532,7 +533,7 @@ Seção 7: comandos de visualização do ambiente
 ###############################################
 São comandos para obter informações sobre o ambiente em que o robô está. Não é possível armazenar o retorno desses comandos em variáveis. 
 
-
+| **a)**
 Comando
     ``ESPIAR``
 
@@ -560,7 +561,7 @@ Exemplo
     ``a 30% a esquerda: dois objetos de cores verde, vermelho a 17 passos.`` 
 
 
-**2.**
+| **b)**
 Comando
     ``ESTADO``
 
@@ -593,9 +594,9 @@ Seção 8: comandos de posição e percepção do ambiente
 São comandos para obter informações sobre o ambiente em que o robô está. É possível armazenar o retorno desses comandos dentro de variáveis. 
 
 
-**1.**
+| **a)**
 Comando
-    ``DISTÂNCIA`` d
+    ``DISTÂNCIA d``
 
 
 Argumentos
@@ -672,9 +673,9 @@ Exemplo
     No exemplo acima, enquanto a distância frontal do robô em relação ao objeto for maior que 3, andará 1 passo para frente. 
 
 
-**2.**
+| **b)**
 Comando
-    ``POS`` k
+    ``POS k``
 
 
 Argumentos
@@ -747,9 +748,9 @@ Exemplo
         FIM SE
 
 
-**3.**
+| **c)**
 Comando
-    ``COR`` c
+    ``COR c``
 
 
 Argumentos
@@ -821,7 +822,7 @@ Seção 9: comandos de condição
 ##############################
 São comandos condicionais que permitem ao programa fazer a escolha do que executar, de acordo com uma condição estipulada.
 
-**1.**
+| **a)**
 Comando
     | ``SE`` expressão operador lógico expressão
     | ``ENTÃO`` comandos
@@ -850,7 +851,7 @@ Exemplo
 
 
 
-**2.**
+| **b)**
 Comando
     | ``SE`` expressão operador lógico expressão 
     | ``ENTÃO`` comandos
@@ -882,6 +883,7 @@ Seção 10: comandos de repetição
 ################################
 São comandos de repetição que permitem uma ou mais instruções serem executadas um determinado número de vezes.
 
+| **a)**
 Comando
     | ``PARA`` inicialização; expressão operador lógico expressão; incremento ou decremento 
     | ``FAÇA`` comandos 
@@ -918,9 +920,9 @@ Exemplo
     A variável “x” começará com o valor 1 e o robô andará um passo para frente e falará “oi”, enquanto seu valor for menor ou igual a linha do obstáculo que está à sua frente. 
 
 
-**2.**
+| **b)**
 Comando
-    | ``REPITA`` n ``VEZES`` comandos 
+    | ``REPITA n VEZES`` comandos 
     ``FIM REPITA``
 
 
@@ -944,7 +946,7 @@ Exemplo
     Supondo que o robô comece na posição 0,0. Os comandos PF 3  GD 90 serão repetidos 4 vezes. Ao final, o robô terá feito um trajeto similar a um quadrado e finalizará na posição 0,0 virado para o norte.
 
 
-**3.**
+| **c)**
 Comando
     | ``ENQUANTO`` expressão operador lógico expressão
     | ``FAÇA`` comandos
@@ -1033,9 +1035,9 @@ Exemplo
 Seção 12: comandos variados
 ##############################
 
-**1.**
+| **a)**
 Comando
-    ESPERAR t
+    ``ESPERAR t``
 
 
 Argumentos
@@ -1056,7 +1058,7 @@ Exemplo
         PF 4
 
 
-**2.**
+| **b)**
 Comando
     ``--``
 
