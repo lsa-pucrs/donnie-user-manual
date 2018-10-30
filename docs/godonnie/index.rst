@@ -827,7 +827,7 @@ Comando
     | ``SE`` *expressão operador lógico expressão*
     | ``ENTÃO`` *comandos*
     | ``SENÃO`` *comandos*
-    ``FIM SE``
+    | ``FIM SE``
 
 
 Argumentos
@@ -855,7 +855,7 @@ Exemplo
 Comando
     | ``SE`` *expressão operador lógico expressão* 
     | ``ENTÃO`` *comandos*
-    ``FIM SE``
+    | ``FIM SE``
 
 
 Argumentos
@@ -887,7 +887,7 @@ São comandos de repetição que permitem uma ou mais instruções serem executa
 Comando
     | ``PARA`` *inicialização; expressão operador lógico expressão; incremento ou decremento* 
     | ``FAÇA`` *comandos*
-    ``FIM PARA`` 
+    | ``FIM PARA`` 
 
 
 Argumentos
@@ -923,7 +923,7 @@ Exemplo
 | **b)**
 Comando
     | ``REPITA n VEZES`` comandos 
-    ``FIM REPITA``
+    | ``FIM REPITA``
 
 
 Argumentos
@@ -950,7 +950,7 @@ Explicação
 Comando
     | ``ENQUANTO`` *expressão operador lógico expressão*
     | ``FAÇA`` *comandos*
-    ``FIM ENQUANTO`` 
+    | ``FIM ENQUANTO`` 
 
 
 Argumentos
@@ -985,7 +985,7 @@ Procedimento é um programa menor (subprograma) que permite decompor e resolver
 Comando
     | ``APRENDER`` *nome*: *variável1*, *variável2*, *variável3*, …
     | ``FAÇA`` *comandos*
-    ``FIM APRENDER``
+    | ``FIM APRENDER``
 
 
 Argumentos
