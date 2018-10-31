@@ -59,7 +59,7 @@ Explanation:
     2. Create a variable and assign an initial value;
     3. Create a variable that receives an expression;
     4. Create a variable inside the command of repeat ``PARA``;
-    5. Create a variable that will receive a value from another command, such as: ``COR`` and ``POS`.
+    5. Create a variable that will receive a value from another command, such as: ``COR`` and ``POS``.
 
     Variables hold only the last received values. They store only integer values. This way, if there is a comma result, only the integer part will be stored in the variable.
 
@@ -197,7 +197,7 @@ Explanation:
 
 Section 4: Operators
 ######################
-They are operators that provide support for logical and mathematical expressions.
+*They are operators that provide support for logical and mathematical expressions*
 
 Command:
     Operators
@@ -291,7 +291,7 @@ Explanation:
 
 Section 5: Movement Commands
 ##############################
-They are commands that move the robot in the environment.
+*They are commands that move the robot in the environment*
 
 | **a)**
 Command:
@@ -381,7 +381,7 @@ Explanation:
 
 Section 6: Rotation Commands
 ###############################
-The robot rotates without movement
+*The robot rotates without movement*
 
 | **a)**
 Command:
@@ -465,7 +465,7 @@ Explanation:
 
 Section 7: Commands of Visualization of the Environment
 #########################################################
-These are commands to get informations about the environment in which the robot is inserted. It’s not possible to store in variables the return from these commands.
+*These are commands to get informations about the environment in which the robot is inserted. It’s not possible to store in variables the return from these commands*
 
 | **a)**
 Command:
@@ -519,7 +519,7 @@ Explanation:
 
 Section 8: Commands of Position and Perception of the Environment
 ################################################################
-These are commands to get informations about the environment in which the robot is inserted. It is possible to store in variables the return from these commands.
+*These are commands to get informations about the environment in which the robot is inserted. It is possible to store in variables the return from these commands*
 
 | **a)**
 Command:
@@ -735,7 +735,7 @@ Explanation:
 
 Section 9: Condition Commands
 ###############################
-These are conditional commands that allow the program to choose what will be executed, according to the stipulated condition.
+*These are conditional commands that allow the program to choose what will be executed, according to the stipulated condition*
 
 | **a)**
 Command: 
@@ -788,7 +788,7 @@ Explanation:
     
 Section 10: Repeat commands
 ############################
-These are commands that allow one or more instructions to be executed a certain number of times.
+*These are commands that allow one or more instructions to be executed a certain number of times*
 
 | **a)**
 Command: 
