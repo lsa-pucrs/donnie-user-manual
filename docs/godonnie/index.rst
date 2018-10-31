@@ -203,22 +203,22 @@ Command:
     Operators
 
 Subject-matter:
-    *Mathematical:*
-    | + sum
-    | - subtraction
-    | * multiplication
-    | / division
+    | *Mathematical:*
+    | ``+ sum``
+    | ``- subtraction``
+    | ``* multiplication``
+    | ``/ division``
 
-    *Comparators:*
-    | <> different
-    | == equal
-    | < smaller
-    | > bigger
-    | <= smaller or equal
-    | >= bigger or equal
+    | *Comparators:*
+    | ``<> different``
+    | ``== equal``
+    | ``< smaller``
+    | ``> bigger``
+    | ``<= smaller or equal``
+    | ``>= bigger or equal``
 
-    *Assignment:*
-    | = assignment
+    | *Assignment:*
+    | ``= assignment``
 
 Explanation:
     Operators are used to compare values or expressions.
