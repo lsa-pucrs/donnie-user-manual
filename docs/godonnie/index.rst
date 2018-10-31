@@ -486,7 +486,7 @@ Example:
 
     It will be spoken:
 
-    ``To the 40 degrees in the left: 1 object of color green at 2 steps. To the 90 degrees in the right: 1 object of color red at 4 steps.``
+    ``To the 40 degrees in the left: 1 object of color green at 2 steps.`` ``To the 90 degrees in the right: 1 object of color red at 4 steps.``
 
     In case two objects are in the same degree, it will inform: ``To the 30 degrees in the left: 2 objects of color green, red at 17 steps.``
 
