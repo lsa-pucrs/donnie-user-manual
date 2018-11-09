@@ -29,7 +29,8 @@ Section 1: Leaving the programming terminal
 ############################################
 
 Command:
-    ``SAIR``
+    ``QUIT``
+    ``EXIT``
 
 Subject-matter:
     None
@@ -41,7 +42,7 @@ Explanation:
     
 ::
     
-    SAIR
+    QUIT
 
 
 Section 2: Declaration of variables
@@ -49,7 +50,7 @@ Section 2: Declaration of variables
 *Variable is an object that holds value. This variable can only receive integer values*
 
 Command:
-    ``CRIAR x``
+    ``VAR x``
 Subject-matter:
     ``x`` is the variable that is going to be created. This variable receives integer values.
 Explanation:
@@ -58,8 +59,8 @@ Explanation:
     1. Create a variable;
     2. Create a variable and assign an initial value;
     3. Create a variable that receives an expression;
-    4. Create a variable inside the command of repeat ``PARA``;
-    5. Create a variable that will receive a value from another command, such as: ``COR`` and ``POS``.
+    4. Create a variable inside the command of repeat ``FOR``;
+    5. Create a variable that will receive a value from another command, such as: ``COLOR`` and ``POS``.
 
     Variables hold only the last received values. They store only integer values. This way, if there is a comma result, only the integer part will be stored in the variable.
 
@@ -67,7 +68,7 @@ Explanation:
 
     - There are no difference between capital letter and lower case;
     - It can’t contain special characters. Exemple: *, @, #, +;
-    - It can’t initiate with a number. Exemple: CRIAR 52abc is wrong.
+    - It can’t initiate with a number. Exemple: VAR 52abc is wrong.
 
 
 **Example:**
@@ -76,7 +77,7 @@ Explanation:
 
     ::
 
-        CRIAR A
+        VAR A
 
     Creates a variable called A.
 
@@ -90,7 +91,7 @@ Explanation:
 
     ::
 
-        CRIAR B = 5
+        VAR B = 5
 
     Creates a variable called ``B`` and stores the value 5.
 
@@ -98,7 +99,7 @@ Explanation:
 
     ::
 
-        CRIAR C = A + B
+        VAR C = A + B
 
     Creates a variable called ``C`` that receives the value of the variable ``A`` added to the value of the variable ``B``. The result of variable ``C`` is 7.
 
@@ -108,13 +109,13 @@ Explanation:
 
     Changes the value of the variable ``C`` and stores the value 1, losing its previous value.
 
-    4. To create a variable inside the command ``PARA`` (this command will be seen in section 10 of the manual), it’s possible to do:
+    4. To create a variable inside the command ``FOR`` (this command will be seen in section 10 of the manual), it’s possible to do:
         
     ::
 
-        PARA CRIAR d = 0; d > 5; d = d +1 FAÇA
+        FOR VAR d = 0; d > 5; d = d +1 FAÇA
         PF 1
-        FIM PARA
+        END FOR
 
     The robot will take 5 steps forward.
 
@@ -122,11 +123,11 @@ Explanation:
 
     ::
 
-        CRIAR d = DISTANCIA F
-        CRIAR c = COR VERDE
-        CRIAR px = POS x
+        VAR d = DISTANCE F
+        VAR c = COLOR GREEN
+        VAR px = POS x
 
-    The variable d is going to store the front distance from the robot to the object. The variable ``c`` is going to store the number of green objects. And the variable ``px`` is going to store the current position of the robot in the x axis. (The commands ``distância``, ``cor`` and ``pos`` will be seen in section 10 of the manual).
+    The variable ``d`` is going to store the front distance from the robot to the object. The variable ``c`` is going to store the number of green objects. And the variable ``px`` is going to store the current position of the robot in the x axis. (The commands ``distância``, ``cor`` and ``pos`` will be seen in section 10 of the manual).
 
     ::
 
@@ -141,7 +142,7 @@ Section 3: Audio Commands
 
 | **a)**
 Command:
-    ``FALAR x``
+    ``SPEAK x``
 
 Subject-matter:
     ``x`` is a variable that must have been created previously.
@@ -153,14 +154,14 @@ Explanation:
 
     ::
 
-        CRIAR x = 5
-        FALAR x
+        VAR x = 5
+        SPEAK x
 
     Will be spoken: 5
 
 | **b)**
 Command:
-    ``FALAR “x”``
+    ``SPEAK “x”``
 
 Subject-matter:
     ``x`` is a word or a phrase, that needs to be between quotation marks
@@ -172,17 +173,17 @@ Explanation:
 
     ::
 
-        FALAR “hello”
+        SPEAK “hello”
 
     Will be spoken: hello
 
 | **c)**
 Command:
-    ``SOM ligado``
-    ``SOM desligado``
+    ``SOUND on``
+    ``SOUND off``
 
 Subject-matter:
-    It turns the audio on or off
+    It turns the sound on or off
 
 Explanation:
     These commands turn on and off the audio from the robot or the virtual environment.
@@ -191,8 +192,8 @@ Explanation:
 
     ::
 
-        SOM LIGADO
-        SOM DESLIGADO
+        SOUND ON
+        SOUND OFF
 
 
 Section 4: Operators
@@ -204,18 +205,18 @@ Command:
 
 Subject-matter:
     | *Mathematical:*
-    | ``+ sum``
+    | ``+ addition``
     | ``- subtraction``
     | ``* multiplication``
     | ``/ division``
 
     | *Comparators:*
     | ``<> different``
-    | ``== equal``
-    | ``< smaller``
-    | ``> bigger``
-    | ``<= smaller or equal``
-    | ``>= bigger or equal``
+    | ``== equals``
+    | ``< is less than``
+    | ``> is more than``
+    | ``<= is less or equals than``
+    | ``>= is more or equals than``
 
     | *Assignment:*
     | ``= assignment``
@@ -224,35 +225,35 @@ Explanation:
     Operators are used to compare values or expressions.
 
 **Example:**
-    *To sum*
+    *To add*
 
     ::
 
-        Criar a = 2
+        Var a = 2
 
     Creating the variable ``a`` and storing the value 2
 
     ::
 
-        Criar b = 1
+        Var b = 1
 
     Creating the variable ``b`` and storing the value 1
 
     ::
 
-        Criar sum
+        Var add
 
-    Creating the variable ``sum``
-
-    ::
-
-        sum = a + b
-
-    Storing in ``sum`` the sum from variables ``a`` and ``b``
+    Creating the variable ``add``
 
     ::
 
-        Falar sum
+        add = a + b
+
+    Storing in ``add`` the sum from variables ``a`` and ``b``
+
+    ::
+
+        Speak add
 
     Will be spoken: 3
 
@@ -260,19 +261,19 @@ Explanation:
 
     ::
 
-        Criar c = 2
+        Var c = 2
 
     Creating the variable ``c`` and storing the value 2
 
     ::
 
-        Criar d = 2
+        Var d = 2
 
     Creating the variable ``d`` and storing the value 2
 
     ::
 
-        Criar division
+        Var division
 
     Creating the variable ``division``
 
@@ -284,7 +285,7 @@ Explanation:
 
     ::
 
-        Falar division
+        Speak division
 
     Will be spoken: 1
 
@@ -295,7 +296,8 @@ Section 5: Movement Commands
 
 | **a)**
 Command:
-    ``PF n``
+    ``FW n``
+    ``FORWARD n``
 
 Subject-matter:
     ``n`` is the number of steps. This command accepts only integer and positive numbers, or variables that store integer numbers, or mathematical expressions that result in integer numbers.
@@ -307,22 +309,22 @@ Explanation:
 
     ::
 
-        PF 5
+        FW 5
 
     The robot will walk 5 steps forward
 
     ::
         
-        CRIAR A = 10
-        PF A
+        VAR A = 10
+        FW A
 
     The robot will walk 10 steps forward
 
     ::
 
-        CRIAR A = 10
-        CRIAR B = 20
-        PF A + B
+        VAR A = 10
+        VAR B = 20
+        FW A + B
 
     The robot will walk 30 steps forward
 
@@ -330,13 +332,14 @@ Explanation:
 
     ::
 
-        PF -5
+        FW -5
 
     When a negative number is typed as a command, the user will be informed that the robot walked 0 steps.
 
 | **b)**
 Command:
-    ``PT n``
+    ``BW n``
+    ``BACKWARD n``
 
 Subject-matter:
     ``n`` is the number of steps. This command accepts only integer and positive numbers, or variables that store integer numbers, or mathematical expressions that result in integer numbers.
@@ -348,22 +351,22 @@ Explanation:
 
     ::
 
-        PT 5
+        BW 5
 
     The robot will walk 5 steps backward
 
     ::
     
-        CRIAR A = 10
-        PT A
+        VAR A = 10
+        BW A
 
     The robot will walk 10 steps backward
 
     ::
 
-        CRIAR A = 10
-        CRIAR B = 20
-        PT A + B
+        VAR A = 10
+        VAR B = 20
+        BW A + B
 
     The robot will walk 30 steps backward
 
@@ -371,7 +374,7 @@ Explanation:
 
     ::
 
-        PT -5
+        BW -5
 
     When a negative number is typed as a command, the user will be informed that the robot walked 0 steps.
 
@@ -385,7 +388,8 @@ Section 6: Rotation Commands
 
 | **a)**
 Command:
-    ``GD n``
+    ``TR n``
+    ``RIGHT TURN n``
 
 Subject-matter:
     ``n`` is the number of degrees. This command accepts only integer and positive numbers, or variables that store integer numbers, or mathematical expressions that result in integer numbers.
@@ -397,35 +401,36 @@ Explanation:
 
     ::
 
-        GD 90
+        TR 90
 
     The robot will turn 90 degrees to the right.
 
     ::
 
-        CRIAR A = 45
-        GD A
+        VAR A = 45
+        TR A
 
     The robot will turn 45 degrees to the right.
 
     ::
 
-        CRIAR A = 80
-        CRIAR B = 10
-        GD A + B
+        VAR A = 80
+        VAR B = 10
+        TR A + B
 
     The robot will turn 90 degrees to the right.
 
     ::
 
-        GD - 90
+        TR - 90
 
     The robot will turn 90 degrees to the left.
 
 
 | **b)**
 Command:
-    ``GE n``
+    ``TL n``
+    ``LEFT TURN n``
 
 Subject-matter:
     ``n`` is the number of degrees. This command accepts only integer and positive numbers, or variables that store integer numbers, or mathematical expressions that result in integer numbers.
@@ -437,28 +442,28 @@ Explanation:
 
     ::
 
-        GE 90
+        TL 90
 
     The robot will turn 90 degrees to the left.
 
     ::
 
-        CRIAR A = 45
-        GE A
+        VAR A = 45
+        TL A
 
     The robot will turn 45 degrees to the left.
 
     ::
 
-        CRIAR A = 80
-        CRIAR B = 10
-        GE A + B
+        VAR A = 80
+        VAR B = 10
+        TL A + B
 
     The robot will turn 90 degrees to the left.
 
     ::
 
-        GE - 90
+        TL - 90
 
     The robot will turn 90 degrees to the right.
 
@@ -469,7 +474,7 @@ Section 7: Commands of Visualization of the Environment
 
 | **a)**
 Command:
-    ``ESPIAR``
+    ``SCAN``
 
 Subject-matter:
     None
@@ -482,7 +487,7 @@ Example:
 
     ::
 
-        ESPIAR
+        SCAN
 
     It will be spoken:
 
@@ -493,7 +498,7 @@ Example:
 
 | **b)**
 Command:
-    ``ESTADO``
+    ``STATE``
 
 Subject-matter:
     None
@@ -505,7 +510,7 @@ Explanation:
 
     ::
 
-        PF 3 ESTADO
+        FW 3 STATE
     
     Let’s say the robot was at 0,0. The robot will walk 3 steps forward and it will inform: 
     ``“I walked 3 steps forward, command 1 was PF 3, walked 3, didn’t crash, position [3,0,0].”`` The number 3 corresponds to the X axis, the first 0 corresponds to the Y axis and the last 0 corresponds to the angle of the robot.
@@ -523,26 +528,26 @@ Section 8: Commands of Position and Perception of the Environment
 
 | **a)**
 Command:
-    ``DISTANCIA d``
+    ``DISTANCE d``
 
 Subject-matter:
-    ``d`` is the direction of the robot sensor (``f`` - front; ``fd`` - right frontal; ``fe`` - left frontal; ``t`` - back; ``te`` - left rear; ``td`` - right rear).
+    ``d`` is the direction of the robot sensor (``f`` - front; ``fr`` - frontal right; ``fl`` - frontal right; ``b`` - back; ``bl`` - back left; ``br`` - back right).
 
 Explanation:
     It returns the quantity of steps from the robot sensor to an obstacle, depending on the chosen direction.               
 
-    There are three ways to use the DISTANCIA command:
+    There are three ways to use the DISTANCE command:
 
-    1. If the user wants to have a feedback, he should use the command ``FALAR`` with the command ``DISTANCIA``.
+    1. If the user wants to have a feedback, he should use the command ``SPEAK`` with the command ``DISTANCE``.
     2. If the user wants only to store in a variable.
-    3. If the user wants to use it directly in another command, for example: ``SE`` (section 9), ``PARA`` (section 10), ``REPITA`` (section 10) or ``ENQUANTO`` (section 10).
+    3. If the user wants to use it directly in another command, for example: ``IF`` (section 9), ``FOR`` (section 10), ``REPEAT`` (section 10) or ``WHILE`` (section 10).
 
-    - DISTANCIA F returns the number of steps from the robot to an object detected by the front sensor of the robot.
-    - DISTANCIA FD returns the number of steps from the robot to an object detected by the frontal right sensor of the robot.
-    - DISTANCIA FE returns the number of steps from the robot to an object detected by the frontal left sensor of the robot.
-    - DISTANCIA T returns the number of steps from the robot to an object detected by the back sensor of the robot.
-    - DISTANCIA TD returns the number of steps from the robot to an object detected by the right rear sensor of the robot.
-    - DISTANCIA TE returns the number of steps from the robot to an object detected by the left rear sensor of the robot.
+    - DISTANCE F returns the number of steps from the robot to an object detected by the front sensor of the robot.
+    - DISTANCE FR returns the number of steps from the robot to an object detected by the frontal right sensor of the robot.
+    - DISTANCE FL returns the number of steps from the robot to an object detected by the frontal left sensor of the robot.
+    - DISTANCE B returns the number of steps from the robot to an object detected by the back sensor of the robot.
+    - DISTANCE BR returns the number of steps from the robot to an object detected by the right rear sensor of the robot.
+    - DISTANCE BL returns the number of steps from the robot to an object detected by the left rear sensor of the robot.
                     
     If there aren’t obstacles, it returns the quantity of step that the sensor can identify, that usually is 60 steps.
 
@@ -551,12 +556,12 @@ Explanation:
 
     ::
 
-        DISTANCIA F
-        DISTANCIA FD
-        DISTANCIA FE
-        DISTANCIA T
-        DISTANCIA TE
-        DISTANCIA TD
+        DISTANCE F
+        DISTANCE FR
+        DISTANCE FL
+        DISTANCE B
+        DISTANCE BL
+        DISTANCE BR
 
     Assuming that the robot is in the position 0,0, facing north and there are obstacles in the following positions, the result will be:
 
@@ -564,41 +569,42 @@ Explanation:
 
     ::
 
-        FALAR DISTANCIA F
+        SPEAK DISTANCE F
 
     Answer: 3 Steps
 
                     
-    You can previously create a variable, and after use it to store what the command DISTANCIA will return:
+    You can previously create a variable, and after use it to store what the command DISTANCE will return:
 
     ::
 
-        CRIAR d = DISTANCIA T
+        VAR d = DISTANCE T
 
     It stores in the variable ``d`` the back distance from the robot to the obstacle that is directly behind it. Assuming that the robot is in the position 0,3 facing north and there is an obstacle in 0,0. The stored value in ``d`` will be 3.
 
     ::
 
-        SE DISTANCIA F>3 ENTAO
-        PF 1
-        SENAO
-        FALAR “It’s impossible to move forward”
-        FIM SE
+        IF DISTANCE F>3 THEN
+        FW 1
+        ELSE
+        SPEAK “It’s impossible to move forward”
+        END IF
 
     In the example above, if the front distance from the robot is bigger than 3, the robot will move 1 step forward. If the distance is equal or smaller than 3, it will return: ``“It’s impossible to move forward”``
 
     ::
 
-        ENQUANTO DISTANCIA F>3
-        FAÇA
-        PF 1
-        FIM ENQUANTO
+        WHILE DISTANCE F>3
+        DO
+        FW 1
+        END WHILE
 
     In the example above, while the front distance from the robot to the object is bigger than 3, it will move 1 step forward.
 
 | **b)**
 Command:
     ``POS k``
+    ``POSITION k``
 
 Subject-matter:
     ``k`` is an axis of the Cartesian plane (X or Y) or angle (A).
@@ -608,9 +614,9 @@ Explanation:
 
     There are three ways to use the POS k command:
 
-    1. If the user wants to have feedback, he should also use the command ``FALAR`` altogether with the command ``POS x``, ``POS y`` or ``POS a``;
+    1. If the user wants to have feedback, he should also use the command ``SPEAK`` altogether with the command ``POS x``, ``POS y`` or ``POS a``;
     2. If the user wants only to store it in a variable;
-    3. If the user wants to use it directly in another command, for example: ``SE`` (section 9), ``PARA`` (section 10), ``REPITA`` (section 10) or ``ENQUANTO`` (section 10).
+    3. If the user wants to use it directly in another command, for example: ``IF`` (section 9), ``FOR`` (section 10), ``REPEAT`` (section 10) or ``WHILE`` (section 10).
 
 Example:
     If the user wants to have a feedback, he can do as it follows:
@@ -619,19 +625,19 @@ Example:
 
     ::
 
-        FALAR POS x
+        SPEAK POS x
 
     It will be spoken 0
 
     ::
 
-        FALAR POS y
+        SPEAK POS y
 
     It will be spoken 0
 
     ::
 
-        FALAR POS a
+        SPEAK POS a
 
     It will be spoken 0
 
@@ -639,19 +645,19 @@ Example:
 
     ::
 
-        CRIAR z = POS x
+        VAR z = POS x
 
     The variable ``z`` has stored the value of the position of the robot in the x axis
 
     ::
 
-        CRIAR b = POS y
+        VAR b = POS y
 
     The variable ``b`` has stored the value of the position of the robot in the y axis
 
     ::
 
-        CRIAR i = POS a 
+        VAR i = POS a 
 
     The variable ``i`` contains the angle of the robot
 
@@ -659,16 +665,16 @@ Example:
 
     ::
 
-        SE POS b > 0 ENTÃO
-        PF 5
-        SENÃO
-        PT 5
-        FIM SE
+        IF POS b > 0 THEN
+        FW 5
+        ELSE
+        BW 5
+        END IF
 
 
 | **c)**
 Command:
-    ``COR c``
+    ``COLOR c``
 
 Subject-matter:
     ``c`` is the color you want (blue, red, green)
@@ -678,9 +684,9 @@ Explanation:
 
     There are three ways to use the COR c command:
 
-    1. If the user wants to have a feedback, he should use the command ``FALAR`` with the command ``COR``.
+    1. If the user wants to have a feedback, he should use the command ``SPEAK`` with the command ``COLOR``.
     2. If the user wants only to store in a variable.
-    3. If the user wants to use it directly in another command, for example: ``SE`` (section 9), ``PARA`` (section 10), ``REPITA`` (section 10) or ``ENQUANTO`` (section 10).
+    3. If the user wants to use it directly in another command, for example: ``IF`` (section 9), ``FOR`` (section 10), ``REPEAT`` (section 10) or ``WHILE`` (section 10).
 
 **Example:**
     
@@ -690,13 +696,13 @@ Explanation:
 
     ::
                        
-        FALAR COR azul
+        SPEAK COLOR blue
 
     It will be spoken 2
 
     ::
 
-        FALAR COR verde
+        SPEAK COLOR green
 
     It will be spoken 1
 
@@ -704,13 +710,13 @@ Explanation:
 
     ::
                         
-        CRIAR A = COR AZUL
+        VAR A = COLOR BLUE
 
     The variable ``A`` stores the number of blue objects.
 
     ::
 
-        CRIAR V = COR VERDE
+        VAR V = COLOR GREEN
 
     The variable ``V`` stores the number of green objects.
 
@@ -718,19 +724,19 @@ Explanation:
 
     ::
                         
-        SE COR AZUL > 0 ENTÃO    
-        FALAR “Number of blue objects”
-        FALAR COR AZUL
-        SENÃO
-        FALAR "Couldn’t find blue objects"
-        FIM SE
+        IF COLOR BLUE > 0 THEN   
+        SPEAK “Number of blue objects”
+        SPEAK COLOR BLUE
+        ELSE
+        SPEAK "Couldn’t find blue objects"
+        END IF
 
-        SE COR VERDE > 0 ENTÃO
-        FALAR “Number of green objects”
-        FALAR COR VERDE
-        SENÃO
-        FALAR "Couldn’t find green objects"
-        FIM SE
+        IF COLOR GREEN > 0 THEN
+        SPEAK “Number of green objects”
+        SPEAK COLOR GREEN
+        ELSE
+        SPEAK "Couldn’t find green objects"
+        END IF
 
 
 Section 9: Condition Commands
@@ -739,34 +745,34 @@ Section 9: Condition Commands
 
 | **a)**
 Command: 
-    | ``SE`` *expression logical operator expression*
-    | ``ENTÃO`` *commands*
-    | ``SENÃO`` *commands*
-    | ``FIM SE``
+    | ``IF`` *expression logical operator expression*
+    | ``THEN`` *commands*
+    | ``ELSE`` *commands*
+    | ``END IF``
 
 Subject-matter:
     Expression = variable or expression
 
 Explanation:
-    Test if a condition is true and, if it is,executes the first line of commands, else executes the SENÃO line of commands.
+    Test if a condition is true and, if it is,executes the first line of commands, else executes the ELSE line of commands.
 
 Example:
     Assuming that, if the variable is lower than 4 the robot has to walk 5 steps forward, else it has to turn 45 degrees to the left:
 
     ::
                    
-        CRIAR a = 0
-        SE a<4
-        ENTÃO PF 5
-        SENÃO GE 45
-        FIM SE
+        VAR a = 0
+        IF a<4
+        THEN FW 5
+        ELSE TL 45
+        END IF
 
 
 | **b)**
 Command:               
-    | ``SE`` *expression logical operator expression*
-    | ``ENTÃO`` *commands*
-    | ``FIM SE``
+    | ``IF`` *expression logical operator expression*
+    | ``THEN`` *commands*
+    | ``END IF``
 
 Subject-matter:
     Expression = variable or expression
@@ -778,10 +784,10 @@ Explanation:
 
     ::
                        
-        CRIAR a = 0
-        SE a<4
-        ENTÃO PF 5
-        FIM SE
+        VAR a = 0
+        IF a<4
+        THEN FW 5
+        END IF
 
     If the variable ``a`` has a value smaller than 4 the robot will walk 5 steps forward
 
@@ -792,9 +798,9 @@ Section 10: Repeat commands
 
 | **a)**
 Command: 
-    | ``PARA`` *initialization; expression logical operator expression; increment or decrement*
-    | ``FAÇA`` *commands*
-    | ``FIM PARA``
+    | ``FOR`` *initialization; expression logical operator expression; increment or decrement*
+    | ``DO`` *commands*
+    | ``END FOR``
 
 Subject-matter:
     | Initialization: variable = an integer value
@@ -812,20 +818,20 @@ Example:
 
     ::
 
-        CRIAR obstacle = DISTANCIA F
-        PARA CRIAR x=1; x<=obstacle; x=x+1     
-        FAÇA
-        PF 1
-        FALAR “hello”
-        FIM PARA
+        VAR obstacle = DISTANCE F
+        FOR VAR x=1; x<=obstacle; x=x+1     
+        DO
+        FW 1
+        SPEAK “hello”
+        END FOR
 
 The variable ``x`` will start with 1 as value, the robot will walk one step forward and will say “hello” while the value is smaller or equal the distance to the obstacle.
 
 
 | **b)**
 Command: 
-    | ``REPITA n VEZES`` commands
-    | ``FIM REPITA``
+    | ``REPEAT n TIMES`` commands
+    | ``END REPEAT``
 
 Subject-matter:
     ``n`` is the number of times that the commands will be repeated
@@ -837,12 +843,12 @@ Example:
 
     ::
 
-        REPITA 4 VEZES
-        GD 90
-        PF 2
-        FIM REPITA
+        REPEAT 4 TIMES
+        TR 90
+        FW 2
+        END REPEAT
     
-    Assuming the robot will start at the position 0,0 , the commands GD 90 and PF 2 will be repeated 4 times. The robot’s trajectory will look like a square.
+    Assuming the robot will start at the position 0,0 , the commands TR 90 and FW 2 will be repeated 4 times. The robot’s trajectory will look like a square.
 
 
 
