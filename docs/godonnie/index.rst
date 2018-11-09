@@ -113,8 +113,8 @@ Explanation:
         
     ::
 
-        FOR VAR d = 0; d > 5; d = d +1 FAÇA
-        PF 1
+        FOR VAR d = 0; d > 5; d = d +1 DO
+        FW 1
         END FOR
 
     The robot will take 5 steps forward.
