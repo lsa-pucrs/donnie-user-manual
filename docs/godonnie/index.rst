@@ -590,7 +590,7 @@ Explanation:
         SPEAK “It’s impossible to move forward”
         END IF
 
-    In the example above, if the front distance from the robot is bigger than 3, the robot will move 1 step forward. If the distance is equal or smaller than 3, it will return: ``“It’s impossible to move forward”``
+    In the example above, if the front distance from the robot is more than 3, the robot will move 1 step forward. If the distance is equal or less than 3, it will return: ``“It’s impossible to move forward”``
 
     ::
 
@@ -599,7 +599,7 @@ Explanation:
         FW 1
         END WHILE
 
-    In the example above, while the front distance from the robot to the object is bigger than 3, it will move 1 step forward.
+    In the example above, while the front distance from the robot to the object is more than 3, it will move 1 step forward.
 
 | **b)**
 Command:
@@ -757,7 +757,7 @@ Explanation:
     Test if a condition is true and, if it is,executes the first line of commands, else executes the ELSE line of commands.
 
 Example:
-    Assuming that, if the variable is lower than 4 the robot has to walk 5 steps forward, else it has to turn 45 degrees to the left:
+    Assuming that, if the variable is less than 4 the robot has to walk 5 steps forward, else it has to turn 45 degrees to the left:
 
     ::
                    
@@ -789,7 +789,7 @@ Explanation:
         THEN FW 5
         END IF
 
-    If the variable ``a`` has a value smaller than 4 the robot will walk 5 steps forward
+    If the variable ``a`` has a value less than 4 the robot will walk 5 steps forward
 
     
 Section 10: Repeat commands
@@ -825,7 +825,7 @@ Example:
         SPEAK “hello”
         END FOR
 
-The variable ``x`` will start with 1 as value, the robot will walk one step forward and will say “hello” while the value is smaller or equal the distance to the obstacle.
+The variable ``x`` will start with 1 as value, the robot will walk one step forward and will say “hello” while the value is less or equal the distance to the obstacle.
 
 
 | **b)**
@@ -851,9 +851,119 @@ Example:
     Assuming the robot will start at the position 0,0 , the commands TR 90 and FW 2 will be repeated 4 times. The robot’s trajectory will look like a square.
 
 
+| **c)**
+Command:
+    | ``WHILE`` *expression logical operator expression*
+    | ``DO`` *commands*
+    | ``END WHILE``
+
+Subject-matter:
+    Variable or expression logical operator variable or expression: variable or expression - logical operator - variable or expression.
+
+Explanation:
+    Repeats the commands while expression - logical operator - expression is true.
+
+Example:
+    This example makes the robot walk towards an obstacle in front of him and after each step speak "I'm coming".
+
+    :: 
+
+        WHILE DISTANCE > 3
+        DO
+        FW 1
+        SPEAK "I'm coming"
+        END WHILE
+
+    While the distance ftom the front of the robot in relation to the object is more than 3, the robot will walk one step forward and will speak "I'm coming".
 
 
+Section 11: Declaration of procedures
+######################################
+*Procedure is a smaller program(subprogram) that allows decompose and solve a more complex problem in a simpler. It can be called in other parts of the program*
 
+| **a)**
+Command:
+    | ``PROCEDURE`` *name: variable1, variable2, variable3*, ...
+    | ``DO`` *commands*
+    | ``END PROCEDURE``
+
+Subject-matter:
+    Name is the name of the subprogram and variable1, variable2, variable3 are its arguments
+
+Explanation:
+    It creates a subprogram. This command only works via file.
+
+Example:
+    The robot needs to walk simulating a rectangle. This rectangle can have different sizes, according to the activity. Therefore the command PROCEDURE can be used to create a procedure called RECTANGLE that receives two variables, one for the height and the other for the base. Thus this procedure can be used to make rectangles with different sizes.
+
+    ::
+
+        PROCEDURE RECTANGLE: base, height
+        DO
+        FW base TR 90
+        FW height TR 90
+        FW base TR 90
+        FW height TR 90
+        END PROCEDURE
+
+    Or
+
+    ::
+
+        PROCEDURE RECTANGLE: base, height
+        DO
+        REPEAT 2 TIMES
+        FW base TR 90
+        FW height TR 90
+        END REPEAT
+        END PROCEDURE
+
+    Calling the subprogram
+
+    ::
+
+        RECTANGLE [5,3]
+        RECTANGLE [8,4]
+        RECTANGLE [9,5]
+
+
+Section 12: Various Commands
+#############################
+
+
+| **a)**
+Command:
+    | ``WAIT t``
+
+Subject-matter:
+    ``t`` is the time in seconds
+
+Explanation:
+    Waits ``t`` seconds to run the next commands
+
+Example:
+    If the robot needs to walk forward 2 steps, wait 3 seconds and then walk 4 more steps
+
+    ::
+
+        FW 2
+        WAIT 3
+        FW 4
+
+| **b)**
+Command:
+    `` -- ``
+
+Subject-matter:
+    None
+
+Explanation:
+    After this symbol -- everything that is in the line that has -- won't be executed. These are reminders about the code.
+
+**Example:**
+    ::
+
+        -- This is a comment
 
 
 GoDonnie Interpreter
