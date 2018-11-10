@@ -952,7 +952,7 @@ Example:
 
 | **b)**
 Command:
-    `` -- ``
+    -- 
 
 Subject-matter:
     None
