@@ -127,7 +127,7 @@ Explanation:
         VAR c = COLOR GREEN
         VAR px = POS x
 
-    The variable ``d`` is going to store the front distance from the robot to the object. The variable ``c`` is going to store the number of green objects. And the variable ``px`` is going to store the current position of the robot in the x axis. (The commands ``distance``, ``cor`` and ``pos`` will be seen in section 10 of the manual).
+    The variable ``d`` is going to store the front distance from the robot to the object. The variable ``c`` is going to store the number of green objects. And the variable ``px`` is going to store the current position of the robot in the x axis. (The commands ``distance``, ``color`` and ``pos`` will be seen in section 10 of the manual).
 
     ::
 
