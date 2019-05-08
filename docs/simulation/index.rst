@@ -4,15 +4,15 @@
 Donnie Robot Simulator 
 ===============
 
-nao falar sobre como montar um novo cenario. para isso, aponte para o manual do desenvolvedor.
-mencionar brevemente que o simulador eh baseado no Stage.
+The Donnie Robot Simulator it's a simulator based on Stage that simulates a real environment.
+It also simulates a robot called Donnie, which is commanded by a programming language called 
+GoDonnie. 
+
 
 Donnie Scenarios
 -------------
 
-falar sobre os cenarios prontos. 
-
-um dos cenarios deve incluir muitiplos robos.
+.. image:: donnie.png
 
 
 .. toctree::
