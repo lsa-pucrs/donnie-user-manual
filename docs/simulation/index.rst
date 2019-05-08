@@ -14,6 +14,7 @@ Donnie Scenarios
 
 .. image:: donnie.png
 
+.. image:: Screenshot.png
 
 .. toctree::
    :maxdepth: 2
