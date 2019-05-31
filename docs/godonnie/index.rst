@@ -952,18 +952,39 @@ Example:
 
 | **b)**
 Command:
-    -- 
+    - --
 
 Subject-matter:
     None
 
 Explanation:
-    After this symbol -- everything that is in the line that has -- won't be executed. These are reminders about the code.
+    After this symbol ``--`` everything that is in the line that has ``--`` won't be executed. These are reminders about the code.
 
 **Example:**
     ::
 
         -- This is a comment
+
+
+Section 13: Vibrating Belt
+##########################
+
+**a)**
+Command:
+    | ``BELT on``
+    | ``BELT off``
+
+Subject-matter:
+    It turns the belt on or off
+
+Explanation:
+    These commands turn the belt on or off
+
+**Example:**
+    ::
+
+        BELT ON
+        BELT OFF
 
 
 GoDonnie Interpreter
