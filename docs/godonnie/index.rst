@@ -969,7 +969,7 @@ Explanation:
 Section 13: Vibrating Belt
 ##########################
 
-**a)**
+
 Command:
     | ``BELT on``
     | ``BELT off``
