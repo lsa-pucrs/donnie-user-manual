@@ -1,6 +1,6 @@
 .. _getting-started:
 
-Antes de começar os tuturiais, estamos assumindo que o ambiente de programação já está configurado.
+Antes de começar os tutoriais, estamos assumindo que o ambiente de programação já está configurado.
 Se este não é o caso, por favor consulte o `Manual do Desenvolvedor Donnie <https://donnie-developer-manual.readthedocs.io/en/latest/index.html>`_ . 
 
 
