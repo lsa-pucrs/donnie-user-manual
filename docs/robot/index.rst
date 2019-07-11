@@ -4,23 +4,23 @@
 Donnie Robot 
 ===============
 
-nao mostrar como montar e configurar um robo. para isso, aponte para o manual do desenvolvedor.
+.. nao mostrar como montar e configurar um robo. para isso, aponte para o manual do desenvolvedor.
 nesta secao assume-se que o robo esta pronto para uso.
 
 Power Up 
 -------------
 
-procedimentos de inicialização
+.. procedimentos de inicialização
 
 
 Running GoDonnie 
 -------------
 
-como executar o GoDonnie com robô fisico
+.. como executar o GoDonnie com robô fisico
 
 
 Shutting Down
 -------------
 
-como desligar o robo
+.. como desligar o robo
 
