@@ -7,11 +7,6 @@ Donnie Assistive Robot: User Manual
 About Donnie
 -----------------
 
-.. image:: ./source/getting_started/images/donnie-robot.png
-   
-.. image:: ./source/getting_started/images/donnie-sim.png
-  
-
 
 .. WARNING::
 
