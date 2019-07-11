@@ -20,17 +20,17 @@ the distance of the objects around the robot.
 Power Up 
 -------------
 
-procedimentos de inicialização
+.. procedimentos de inicialização
 
 
 Running the Belt 
 -------------
 
-como executar o cinto
+.. como executar o cinto
 
 
 Shutting Down
 -------------
 
-como desligar o cinto
+.. como desligar o cinto
 
