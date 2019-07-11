@@ -9,11 +9,11 @@ About Donnie
 
 .. image:: ./source/getting_started/images/donnie-robot.png
     :align: center
-    :alt: sempre use alt para descreve a imagem p um deficiente visual
+  ..  :alt: sempre use alt para descreve a imagem p um deficiente visual
 
 .. image:: ./source/getting_started/images/donnie-sim.png
     :align: center
-    :alt: sempre use alt para descreve a imagem p um deficiente visual
+   .. :alt: sempre use alt para descreve a imagem p um deficiente visual
 
 
 .. WARNING::
